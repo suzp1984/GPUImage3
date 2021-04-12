@@ -52,7 +52,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Exposure",
         sliderConfiguration:.enabled(minimumValue:-4.0, maximumValue:4.0, initialValue:0.0),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.exposure = sliderValue
+            filter.uniform.exposure = sliderValue
         },
         filterOperationType:.singleInput
     ),
@@ -62,7 +62,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"RGB",
         sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:2.0, initialValue:1.0),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.green = sliderValue
+            filter.uniform.greenAdjustment = sliderValue
         },
         filterOperationType:.singleInput
     ),
@@ -72,20 +72,20 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Hue",
         sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:360.0, initialValue:90.0),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.hue = sliderValue
+            filter.uniform.hue = sliderValue
         },
         filterOperationType:.singleInput
     ),
-//    FilterOperation(
-//        filter:{WhiteBalance()},
-//        listName:"White balance",
-//        titleName:"White Balance",
-//        sliderConfiguration:.enabled(minimumValue:2500.0, maximumValue:7500.0, initialValue:5000.0),
-//        sliderUpdateCallback: {(filter, sliderValue) in
-//            filter.temperature = sliderValue
-//        },
-//        filterOperationType:.singleInput
-//    ),
+    FilterOperation(
+        filter:{WhiteBalance()},
+        listName:"White balance",
+        titleName:"White Balance",
+        sliderConfiguration:.enabled(minimumValue:-1.0, maximumValue:1.0, initialValue:0.0),
+        sliderUpdateCallback: {(filter, sliderValue) in
+            filter.uniform.temperature = sliderValue
+        },
+        filterOperationType:.singleInput
+    ),
     FilterOperation(
         filter:{MonochromeFilter()},
         listName:"Monochrome",

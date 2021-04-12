@@ -1,11 +1,7 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
+#include "ExposureAdjustment.h"
 using namespace metal;
-
-typedef struct
-{
-    float exposure;
-} ExposureUniform;
 
 fragment half4 exposureFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                                   texture2d<half> inputTexture [[texture(0)]],

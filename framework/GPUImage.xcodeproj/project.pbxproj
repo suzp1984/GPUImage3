@@ -17,6 +17,18 @@
 		37C36AD526242271008586E7 /* BrightnessAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AD326242271008586E7 /* BrightnessAdjustment.h */; };
 		37C36AD9262423AB008586E7 /* LevelsAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AD8262423AB008586E7 /* LevelsAdjustment.h */; };
 		37C36ADA262423AB008586E7 /* LevelsAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AD8262423AB008586E7 /* LevelsAdjustment.h */; };
+		37C36ADE26242AD4008586E7 /* ExposureAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36ADD26242AD4008586E7 /* ExposureAdjustment.h */; };
+		37C36ADF26242AD4008586E7 /* ExposureAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36ADD26242AD4008586E7 /* ExposureAdjustment.h */; };
+		37C36AE326242BD3008586E7 /* RGBAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AE226242BD3008586E7 /* RGBAdjustment.h */; };
+		37C36AE426242BD3008586E7 /* RGBAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AE226242BD3008586E7 /* RGBAdjustment.h */; };
+		37C36AE826242DA8008586E7 /* HueAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AE726242DA8008586E7 /* HueAdjustment.h */; };
+		37C36AE926242DA8008586E7 /* HueAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AE726242DA8008586E7 /* HueAdjustment.h */; };
+		37C36AEE26242EEF008586E7 /* WhiteBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A81C992101015700A3B43A /* WhiteBalance.swift */; };
+		37C36AF126242EEF008586E7 /* WhiteBalance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A81C992101015700A3B43A /* WhiteBalance.swift */; };
+		37C36AF426242F1D008586E7 /* WhiteBalance.metal in Sources */ = {isa = PBXBuildFile; fileRef = 79A81C9C2101016100A3B43A /* WhiteBalance.metal */; };
+		37C36AF726242F1D008586E7 /* WhiteBalance.metal in Sources */ = {isa = PBXBuildFile; fileRef = 79A81C9C2101016100A3B43A /* WhiteBalance.metal */; };
+		37C36AFB26243098008586E7 /* WhiteBalance.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AFA26243098008586E7 /* WhiteBalance.h */; };
+		37C36AFC26243098008586E7 /* WhiteBalance.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AFA26243098008586E7 /* WhiteBalance.h */; };
 		4C280F76213426D6001A985C /* Posterize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C280F75213426D6001A985C /* Posterize.swift */; };
 		4C280F77213426D6001A985C /* Posterize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C280F75213426D6001A985C /* Posterize.swift */; };
 		4C280F79213426EC001A985C /* Posterize.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4C280F78213426EC001A985C /* Posterize.metal */; };
@@ -427,6 +439,10 @@
 		37C36ACC26241B68008586E7 /* ContrastAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ContrastAdjustment.h; path = Source/Operations/ContrastAdjustment.h; sourceTree = "<group>"; };
 		37C36AD326242271008586E7 /* BrightnessAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BrightnessAdjustment.h; path = Source/Operations/BrightnessAdjustment.h; sourceTree = "<group>"; };
 		37C36AD8262423AB008586E7 /* LevelsAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LevelsAdjustment.h; path = Source/Operations/LevelsAdjustment.h; sourceTree = "<group>"; };
+		37C36ADD26242AD4008586E7 /* ExposureAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ExposureAdjustment.h; path = Source/Operations/ExposureAdjustment.h; sourceTree = "<group>"; };
+		37C36AE226242BD3008586E7 /* RGBAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RGBAdjustment.h; path = Source/Operations/RGBAdjustment.h; sourceTree = "<group>"; };
+		37C36AE726242DA8008586E7 /* HueAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HueAdjustment.h; path = Source/Operations/HueAdjustment.h; sourceTree = "<group>"; };
+		37C36AFA26243098008586E7 /* WhiteBalance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WhiteBalance.h; path = Source/Operations/WhiteBalance.h; sourceTree = "<group>"; };
 		4C280F75213426D6001A985C /* Posterize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Posterize.swift; path = Source/Operations/Posterize.swift; sourceTree = "<group>"; };
 		4C280F78213426EC001A985C /* Posterize.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; name = Posterize.metal; path = Source/Operations/Posterize.metal; sourceTree = "<group>"; };
 		4CC48BED213433CB00817C34 /* StretchDistortion.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; name = StretchDistortion.metal; path = Source/Operations/StretchDistortion.metal; sourceTree = "<group>"; };
@@ -767,6 +783,10 @@
 				37C36ACC26241B68008586E7 /* ContrastAdjustment.h */,
 				37C36AD326242271008586E7 /* BrightnessAdjustment.h */,
 				37C36AD8262423AB008586E7 /* LevelsAdjustment.h */,
+				37C36ADD26242AD4008586E7 /* ExposureAdjustment.h */,
+				37C36AE226242BD3008586E7 /* RGBAdjustment.h */,
+				37C36AE726242DA8008586E7 /* HueAdjustment.h */,
+				37C36AFA26243098008586E7 /* WhiteBalance.h */,
 			);
 			name = "Color processing";
 			sourceTree = "<group>";
@@ -954,11 +974,15 @@
 				37C36AD426242271008586E7 /* BrightnessAdjustment.h in Headers */,
 				37C36ABB2623E45D008586E7 /* SaturationAdjustment.h in Headers */,
 				37C36AD9262423AB008586E7 /* LevelsAdjustment.h in Headers */,
+				37C36AE826242DA8008586E7 /* HueAdjustment.h in Headers */,
 				BCC6AB65210E5FF600F9803A /* TexelSamplingTypes.h in Headers */,
 				37C36ACD26241B68008586E7 /* ContrastAdjustment.h in Headers */,
 				BC7BA27B20F2C5E8006B5F4B /* OperationShaderTypes.h in Headers */,
+				37C36AFB26243098008586E7 /* WhiteBalance.h in Headers */,
 				79CB6E45210A55CB0042F87B /* BlendShaderTypes.h in Headers */,
+				37C36AE326242BD3008586E7 /* RGBAdjustment.h in Headers */,
 				37C36AC22623E548008586E7 /* GPUImage_bridge.h in Headers */,
+				37C36ADE26242AD4008586E7 /* ExposureAdjustment.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -969,11 +993,15 @@
 				37C36AD526242271008586E7 /* BrightnessAdjustment.h in Headers */,
 				37C36ABC2623E45D008586E7 /* SaturationAdjustment.h in Headers */,
 				37C36ADA262423AB008586E7 /* LevelsAdjustment.h in Headers */,
+				37C36AE926242DA8008586E7 /* HueAdjustment.h in Headers */,
 				BCC6AB66210E5FF600F9803A /* TexelSamplingTypes.h in Headers */,
 				37C36ACE26241B68008586E7 /* ContrastAdjustment.h in Headers */,
 				BC7BA27C20F2C5E8006B5F4B /* OperationShaderTypes.h in Headers */,
+				37C36AFC26243098008586E7 /* WhiteBalance.h in Headers */,
 				79CB6E46210A55CB0042F87B /* BlendShaderTypes.h in Headers */,
+				37C36AE426242BD3008586E7 /* RGBAdjustment.h in Headers */,
 				37C36AC52623E551008586E7 /* GPUImage_bridge.h in Headers */,
+				37C36ADF26242AD4008586E7 /* ExposureAdjustment.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1140,6 +1168,7 @@
 				795ECAA521ED2549000EF927 /* ThresholdSobelEdgeDetection.metal in Sources */,
 				7954BF462214965D008402A6 /* PinchDistortion.swift in Sources */,
 				795ECAB121ED2E58000EF927 /* ThresholdSketch.metal in Sources */,
+				37C36AEE26242EEF008586E7 /* WhiteBalance.swift in Sources */,
 				79DD50CD213454A2004EF308 /* Vignette.metal in Sources */,
 				BC9294AA210513DF006C8E93 /* SepiaToneFilter.swift in Sources */,
 				79DD50C4213450BE004EF308 /* SwirlDistortion.swift in Sources */,
@@ -1204,6 +1233,7 @@
 				793D934120F693AD008A7A6E /* GammaAdjustment.swift in Sources */,
 				BCCFEA6222AEEDDB00C9F4CC /* Camera.swift in Sources */,
 				79A81CA62101266600A3B43A /* HighlightAndShadowTint.swift in Sources */,
+				37C36AF426242F1D008586E7 /* WhiteBalance.metal in Sources */,
 				79CB6E38210A0EDE0042F87B /* SourceOverBlend.metal in Sources */,
 				79CB6DD22108B3F00042F87B /* ColorDodgeBlend.swift in Sources */,
 				79EB1B6E2125C7670049135E /* LookupFilter.metal in Sources */,
@@ -1345,6 +1375,7 @@
 				795ECAA621ED2549000EF927 /* ThresholdSobelEdgeDetection.metal in Sources */,
 				795ECAB221ED2E58000EF927 /* ThresholdSketch.metal in Sources */,
 				7954BF472214965D008402A6 /* PinchDistortion.swift in Sources */,
+				37C36AF126242EEF008586E7 /* WhiteBalance.swift in Sources */,
 				79DD50CE213454A2004EF308 /* Vignette.metal in Sources */,
 				BC9294AB210513DF006C8E93 /* SepiaToneFilter.swift in Sources */,
 				79DD50C5213450BE004EF308 /* SwirlDistortion.swift in Sources */,
@@ -1409,6 +1440,7 @@
 				793D933620F68C1B008A7A6E /* ContrastAdjustment.swift in Sources */,
 				BCCFEA6322AEEDDB00C9F4CC /* Camera.swift in Sources */,
 				79E30E6D20F118CD005FA13C /* Texture.swift in Sources */,
+				37C36AF726242F1D008586E7 /* WhiteBalance.metal in Sources */,
 				79A81CA72101266600A3B43A /* HighlightAndShadowTint.swift in Sources */,
 				BC7BA29420F6F2CB006B5F4B /* BrightnessAdjustment.metal in Sources */,
 				79CB6E39210A0EDE0042F87B /* SourceOverBlend.metal in Sources */,

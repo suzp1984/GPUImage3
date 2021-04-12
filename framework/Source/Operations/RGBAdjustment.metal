@@ -1,13 +1,7 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
+#include "RGBAdjustment.h"
 using namespace metal;
-
-typedef struct
-{
-    float redAdjustment;
-    float greenAdjustment;
-    float blueAdjustment;
-} RGBAdjustmentUniform;
 
 fragment half4 rgbAdjustmentFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                              texture2d<half> inputTexture [[texture(0)]],

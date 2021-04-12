@@ -1,13 +1,18 @@
-public class RGBAdjustment: BasicOperation {
-    public var red:Float = 1.0 { didSet { uniformSettings["redAdjustment"] = red } }
-    public var blue:Float = 1.0 { didSet { uniformSettings["blueAdjustment"] = blue } }
-    public var green:Float = 1.0 { didSet { uniformSettings["greenAdjustment"] = green } }
+public class RGBAdjustment: CustomOperation {
+    public var uniform: RGBAdjustmentUniform!
     
     public init() {
         super.init(fragmentFunctionName:"rgbAdjustmentFragment", numberOfInputs:1)
         
-        ({red = 1.0})()
-        ({blue = 1.0})()
-        ({green = 1.0})()
+        uniform = RGBAdjustmentUniform(redAdjustment: 1.0,
+                                       greenAdjustment: 1.0,
+                                       blueAdjustment: 1.0)
+        uniformHandler = processUniforms(handler:)
+    }
+    
+    func processUniforms(handler: (UnsafeRawPointer, Int) -> Void) -> Void {
+        withUnsafePointer(to: uniform) {
+            handler($0, MemoryLayout<RGBAdjustmentUniform>.stride)
+        }
     }
 }

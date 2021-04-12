@@ -10,3 +10,7 @@
 #import "Operations/ContrastAdjustment.h"
 #import "Operations/BrightnessAdjustment.h"
 #import "Operations/LevelsAdjustment.h"
+#import "Operations/ExposureAdjustment.h"
+#import "Operations/RGBAdjustment.h"
+#import "Operations/HueAdjustment.h"
+#import "Operations/WhiteBalance.h"

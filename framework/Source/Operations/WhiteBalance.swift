@@ -1,13 +1,19 @@
-/*
-public class WhiteBalance: BasicOperation {
-    public var temperature:Float = 5000.0 { didSet { uniformSettings["temperature"] = temperature < 5000.0 ? 0.0004 * (temperature - 5000.0) : 0.00006 * (temperature - 5000.0) } }
-    public var tint:Float = 0.0 { didSet { uniformSettings["tint"] = tint / 100.0 } }
+
+public class WhiteBalance: CustomOperation {
+    public var uniform: WhiteBalanceUniform!
     
     public init() {
         super.init(fragmentFunctionName:"whiteBalanceFragmentShader", numberOfInputs:1)
         
-        uniformSettings.appendUniform(5000.0)
-        uniformSettings.appendUniform(0.0)
+        uniform = WhiteBalanceUniform(temperature: 0.0, tint: 1.0)
+
+        uniformHandler = processUniforms(handler:)
+    }
+    
+    func processUniforms(handler: (UnsafeRawPointer, Int) -> Void) -> Void {
+        withUnsafePointer(to: uniform) {
+            handler($0, MemoryLayout<WhiteBalanceUniform>.stride)
+        }
     }
 }
- */
+

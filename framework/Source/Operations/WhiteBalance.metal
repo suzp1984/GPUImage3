@@ -1,17 +1,21 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
+#include "WhiteBalance.h"
 using namespace metal;
 
 constant half3 warmFilter = half3(0.93, 0.54, 0.0);
 
-constant half3x3 RGBtoYIQ = half3x3(0.299, 0.587, 0.114, 0.596, -0.274, -0.322, 0.212, -0.523, 0.311);
-constant half3x3 YIQtoRGB = half3x3(1.0, 0.956, 0.621, 1.0, -0.272, -0.647, 1.0, -1.105, 1.702);
+constant half3x3 RGBtoYIQ = {
+    0.299, 0.587, 0.114,
+    0.596, -0.274, -0.322,
+    0.212, -0.523, 0.311
+};
 
-typedef struct
-{
-    float temperature;
-    float tint;
-} WhiteBalanceUniform;
+constant half3x3 YIQtoRGB = {
+    1.0, 0.956, 0.621,
+    1.0, -0.272, -0.647,
+    1.0, -1.105, 1.702
+};
 
 fragment half4 whiteBalanceFragmentShader(SingleInputVertexIO fragmentInput [[stage_in]],
                                   texture2d<half> inputTexture [[texture(0)]],

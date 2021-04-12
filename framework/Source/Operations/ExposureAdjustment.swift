@@ -1,9 +1,16 @@
-public class ExposureAdjustment: BasicOperation {
-    public var exposure:Float = 0.0 { didSet { uniformSettings["exposure"] = exposure } }
+public class ExposureAdjustment: CustomOperation {
+    public var uniform: ExposureUniform!
     
     public init() {
         super.init(fragmentFunctionName:"exposureFragment", numberOfInputs:1)
         
-        ({exposure = 0.0})()
+        uniform = ExposureUniform(exposure: 0.0)
+        uniformHandler = processUniforms(handler:)
+    }
+    
+    func processUniforms(handler: (UnsafeRawPointer, Int) -> Void) -> Void {
+        withUnsafePointer(to: uniform) {
+            handler($0, MemoryLayout<ExposureUniform>.stride)
+        }
     }
 }

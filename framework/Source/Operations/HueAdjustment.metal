@@ -1,5 +1,6 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
+#include "HueAdjustment.h"
 using namespace metal;
 
 // Hue Constants
@@ -10,11 +11,6 @@ constant half4 kRGBToQ = half4(0.211456, -0.522591, 0.31135, 0.0);
 constant half4 kYIQToR = half4(1.0, 0.9563, 0.6210, 0.0);
 constant half4 kYIQToG = half4(1.0, -0.2721, -0.6474, 0.0);
 constant half4 kYIQToB = half4(1.0, -1.1070, 1.7046, 0.0);
-
-typedef struct
-{
-    float hue;
-} HueUniform;
 
 fragment half4 hueFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                              texture2d<half> inputTexture [[texture(0)]],
