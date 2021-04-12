@@ -1,18 +1,23 @@
-public class Sharpen: BasicOperation {
-    public var sharpness:Float = 0.0 { didSet { uniformSettings["sharpness"] = sharpness } }
-    public var overriddenTexelSize:Size?
+public class Sharpen: CustomOperation {
+    public var uniform: SharpenUniform!
     
     public init() {
-        super.init(vertexFunctionName: "sharpenVertex", fragmentFunctionName: "sharpenFragment", numberOfInputs: 1)
+        super.init(fragmentFunctionName: "sharpenFragment", numberOfInputs: 1)
         
-        ({sharpness = 0.0})()
+        uniform = SharpenUniform(sharpness: 0.0, textureWidth: 400.0, textureHeight: 400.0)
+        uniformHandler = processUniforms(handler:)
     }
     
-    // Pretty sure this is OpenGL only
-//    override func configureFramebufferSpecificUniforms(_ inputFramebuffer:Framebuffer) {
-//        let outputRotation = overriddenOutputRotation ?? inputFramebuffer.orientation.rotationNeededForOrientation(.portrait)
-//        let texelSize = overriddenTexelSize ?? inputFramebuffer.texelSize(for:outputRotation)
-//        uniformSettings["texelWidth"] = texelSize.width
-//        uniformSettings["texelHeight"] = texelSize.height
-//    }
+    func processUniforms(handler: (UnsafeRawPointer, Int) -> Void) -> Void {
+        withUnsafePointer(to: uniform) {
+            handler($0, MemoryLayout<SharpenUniform>.stride)
+        }
+    }
+    
+    public override var isUniformNeedTextureSize: Bool { get {return true } }
+    
+    public override func setUniformTextureSize(width: Float, height: Float) {
+        uniform.textureWidth = width
+        uniform.textureHeight = height
+    }
 }

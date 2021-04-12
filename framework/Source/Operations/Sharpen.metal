@@ -1,38 +1,41 @@
 #include <metal_stdlib>
+#include "OperationShaderTypes.h"
+#include "Sharpen.h"
+
 using namespace metal;
-
-typedef struct
-{
-    float4 position [[position]];
-    
-    float2 textureCoordinate [[user(textureCoordinate)]];
-    float2 leftTextureCoordinate [[user(leftTextureCoordinate)]];
-    float2 rightTextureCoordinate [[user(rightTextureCoordinate)]];
-    float2 topTextureCoordinate [[user(topTextureCoordinate)]];
-    float2 bottomTextureCoordinate [[user(bottomTextureCoordinate)]];
-}  SharpenVertexIO;
-
-
-
-vertex SharpenVertexIO sharpenVertex(const device packed_float2 *position [[buffer(0)]],
-                                     const device packed_float2 *textureCoordinate [[buffer(1)]],
-                                     uint vid [[vertex_id]])
-{
-    SharpenVertexIO outputVertices;
-    
-    outputVertices.position = float4(position[vid], 0, 1.0);
-    
-    float2 widthStep = float2(1.0, 0.0);
-    float2 heightStep = float2(0.0, 1.0);
-    
-    outputVertices.textureCoordinate = textureCoordinate[vid];
-    outputVertices.leftTextureCoordinate = textureCoordinate[vid] - widthStep;
-    outputVertices.rightTextureCoordinate = textureCoordinate[vid] + widthStep;
-    outputVertices.topTextureCoordinate = textureCoordinate[vid] + heightStep;
-    outputVertices.bottomTextureCoordinate = textureCoordinate[vid] - heightStep;
-    
-    return outputVertices;
-}
+//
+//typedef struct
+//{
+//    float4 position [[position]];
+//
+//    float2 textureCoordinate [[user(textureCoordinate)]];
+//    float2 leftTextureCoordinate [[user(leftTextureCoordinate)]];
+//    float2 rightTextureCoordinate [[user(rightTextureCoordinate)]];
+//    float2 topTextureCoordinate [[user(topTextureCoordinate)]];
+//    float2 bottomTextureCoordinate [[user(bottomTextureCoordinate)]];
+//}  SharpenVertexIO;
+//
+//
+//
+//vertex SharpenVertexIO sharpenVertex(const device packed_float2 *position [[buffer(0)]],
+//                                     const device packed_float2 *textureCoordinate [[buffer(1)]],
+//                                     uint vid [[vertex_id]])
+//{
+//    SharpenVertexIO outputVertices;
+//
+//    outputVertices.position = float4(position[vid], 0, 1.0);
+//
+//    float2 widthStep = float2(1.0/800.0, 0.0);
+//    float2 heightStep = float2(0.0, 1.0/800.0);
+//
+//    outputVertices.textureCoordinate = textureCoordinate[vid];
+//    outputVertices.leftTextureCoordinate = textureCoordinate[vid] - widthStep;
+//    outputVertices.rightTextureCoordinate = textureCoordinate[vid] + widthStep;
+//    outputVertices.topTextureCoordinate = textureCoordinate[vid] + heightStep;
+//    outputVertices.bottomTextureCoordinate = textureCoordinate[vid] - heightStep;
+//
+//    return outputVertices;
+//}
 
 
 // Vertex Shader
@@ -72,27 +75,38 @@ vertex SharpenVertexIO sharpenVertex(const device packed_float2 *position [[buff
 
  */
 
-typedef struct {
-    float sharpness;
-} SharpenUniform;
-
-fragment half4 sharpenFragment(SharpenVertexIO fragmentInput [[stage_in]],
+fragment half4 sharpenFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                               texture2d<half> inputTexture [[texture(0)]],
                               constant SharpenUniform& uniform [[buffer(1)]])
 {
-    constexpr sampler quadSampler(coord::pixel);
+//    constexpr sampler quadSampler(coord::pixel);
+    constexpr sampler quadSampler;
+
+    float2 widthStep = float2(8.0/uniform.textureWidth, 0.0);
+    float2 heightStep = float2(0.0, 8.0/uniform.textureHeight);
+    
+    float2 textureCoordinate = fragmentInput.textureCoordinate;
+    float2 leftTextureCoordinate = textureCoordinate - widthStep;
+    float2 rightTextureCoordinate = textureCoordinate + widthStep;
+    float2 topTextureCoordinate = textureCoordinate + heightStep;
+    float2 bottomTextureCoordinate = textureCoordinate - heightStep;
+    
     half3 centerColor = inputTexture.sample(quadSampler, fragmentInput.textureCoordinate).rgb;
-    half3 leftColor = inputTexture.sample(quadSampler, fragmentInput.leftTextureCoordinate).rgb;
-    half3 rightColor = inputTexture.sample(quadSampler, fragmentInput.rightTextureCoordinate).rgb;
-    half3 topColor = inputTexture.sample(quadSampler, fragmentInput.topTextureCoordinate).rgb;
-    half3 bottomColor = inputTexture.sample(quadSampler, fragmentInput.bottomTextureCoordinate).rgb;
+    half3 leftColor = inputTexture.sample(quadSampler, leftTextureCoordinate).rgb;
+    half3 rightColor = inputTexture.sample(quadSampler, rightTextureCoordinate).rgb;
+    half3 topColor = inputTexture.sample(quadSampler, topTextureCoordinate).rgb;
+    half3 bottomColor = inputTexture.sample(quadSampler, bottomTextureCoordinate).rgb;
+    
     
     half edgeMultiplier = half(uniform.sharpness);
     half centerMultiplier = 1.0 + 4.0 * edgeMultiplier;
     
     return half4((centerColor * centerMultiplier
-                  - (leftColor * edgeMultiplier + rightColor * edgeMultiplier+ topColor * edgeMultiplier + bottomColor * edgeMultiplier)),
-                 inputTexture.sample(quadSampler, fragmentInput.bottomTextureCoordinate).w);
+                  - (leftColor * edgeMultiplier +
+                     rightColor * edgeMultiplier +
+                     topColor * edgeMultiplier +
+                     bottomColor * edgeMultiplier)),
+                 inputTexture.sample(quadSampler, bottomTextureCoordinate).w);
     
 }
 // Fragment Shader

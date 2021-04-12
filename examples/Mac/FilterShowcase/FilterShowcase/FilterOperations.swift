@@ -111,16 +111,16 @@ let filterOperations: Array<FilterOperationInterface> = [
         },
         filterOperationType:.singleInput
     ),
-//    FilterOperation(
-//        filter:{Sharpen()},
-//        listName:"Sharpen",
-//        titleName:"Sharpen",
-//        sliderConfiguration:.enabled(minimumValue:-1.0, maximumValue:4.0, initialValue:0.0),
-//        sliderUpdateCallback: {(filter, sliderValue) in
-//            filter.sharpness = sliderValue
-//        },
-//        filterOperationType:.singleInput
-//    ),
+    FilterOperation(
+        filter:{Sharpen()},
+        listName:"Sharpen",
+        titleName:"Sharpen",
+        sliderConfiguration:.enabled(minimumValue:-1.0, maximumValue:4.0, initialValue:0.0),
+        sliderUpdateCallback: {(filter, sliderValue) in
+            filter.uniform.sharpness = sliderValue
+        },
+        filterOperationType:.singleInput
+    ),
 //    FilterOperation(
 //        filter:{UnsharpMask()},
 //        listName:"Unsharp mask",

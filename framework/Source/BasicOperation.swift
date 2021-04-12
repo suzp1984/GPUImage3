@@ -161,6 +161,12 @@ open class CustomOperation: AbstractOperation {
     open func setUniformAspectRatio(ratio: Float) {
     }
     
+    open var isUniformNeedTextureSize: Bool { get { return false }}
+    
+    open func setUniformTextureSize(width: Float, height: Float) {
+        
+    }
+    
     open override func render(commandBuffer: MTLCommandBuffer,
                               pipelineState: MTLRenderPipelineState,
                               inputTextures: [UInt : Texture],
@@ -170,9 +176,16 @@ open class CustomOperation: AbstractOperation {
             uniformHandler { uniformPtr, length in
                 
                 if isUniformNeedAspectRatio {
-                    let firstInputTexture = inputTextures[0]!
-                    let outputRotation = firstInputTexture.orientation.rotationNeeded(for:.portrait)
-                    setUniformAspectRatio(ratio: firstInputTexture.aspectRatio(for: outputRotation))
+//                    let firstInputTexture = inputTextures[0]!
+//                    let outputRotation = firstInputTexture.orientation.rotationNeeded(for:.portrait)
+//                    setUniformAspectRatio(ratio: firstInputTexture.aspectRatio(for: outputRotation))
+//                    let outputRotation = outputTexture.orientation.rotationNeeded(for: .portraitUpsideDown)
+                    setUniformAspectRatio(ratio: outputTexture.aspectRatio(for: .noRotation))
+                }
+                
+                if isUniformNeedTextureSize {
+                    setUniformTextureSize(width: Float(outputTexture.texture.width),
+                                          height: Float(outputTexture.texture.height))
                 }
                 
                 commandBuffer.renderQuad(pipelineState: pipelineState,
