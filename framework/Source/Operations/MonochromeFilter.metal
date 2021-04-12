@@ -1,13 +1,8 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
+#include "MonochromeFilter.h"
 
 using namespace metal;
-
-typedef struct
-{
-    float intensity;
-    float3 filterColor;
-} MonochromeUniform;
 
 fragment half4 monochromeFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                                   texture2d<half> inputTexture [[texture(0)]],

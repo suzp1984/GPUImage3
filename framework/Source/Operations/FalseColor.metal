@@ -1,12 +1,7 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
+#include "FalseColor.h"
 using namespace metal;
-
-typedef struct
-{
-    float4 firstColor;
-    float4 secondColor;
-} FalseColorUniform;
 
 fragment half4 falseColorFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                                   texture2d<half> inputTexture [[texture(0)]],

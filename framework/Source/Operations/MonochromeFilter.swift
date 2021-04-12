@@ -1,13 +1,18 @@
-public class MonochromeFilter: BasicOperation {
-    public var intensity:Float = 1.0 { didSet { uniformSettings["intensity"] = intensity } }
-    public var color:Color = Color(red:0.6, green:0.45, blue:0.3, alpha:1.0) { didSet { uniformSettings["filterColor"] = color } }
+public class MonochromeFilter: CustomOperation {
+    public var uniform: MonochromeUniform!
     
     public init() {
         super.init(fragmentFunctionName:"monochromeFragment", numberOfInputs:1)
         
-        self.uniformSettings.colorUniformsUseAlpha = false
-        ({intensity = 1.0})()
-        ({color = Color(red:0.6, green:0.45, blue:0.3, alpha:1.0)})()
+        uniform = MonochromeUniform(intensity: 1.0, filterColor: vector_float3(0.6, 0.45, 0.3))
+        
+        uniformHandler = processUniforms(handler:)
+    }
+    
+    func processUniforms(handler: (UnsafeRawPointer, Int) -> Void) -> Void {
+        withUnsafePointer(to: uniform) {
+            handler($0, MemoryLayout<MonochromeUniform>.stride)
+        }
     }
 }
 

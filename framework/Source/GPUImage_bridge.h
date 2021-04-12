@@ -14,3 +14,5 @@
 #import "Operations/RGBAdjustment.h"
 #import "Operations/HueAdjustment.h"
 #import "Operations/WhiteBalance.h"
+#import "Operations/MonochromeFilter.h"
+#import "Operations/FalseColor.h"

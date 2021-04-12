@@ -1,12 +1,18 @@
-public class FalseColor: BasicOperation {
-    public var firstColor:Color = Color(red:0.0, green:0.0, blue:0.5, alpha:1.0) { didSet { uniformSettings["firstColor"] = firstColor } }
-    public var secondColor:Color = Color.red { didSet { uniformSettings["secondColor"] = secondColor } }
+public class FalseColor: CustomOperation {
+    public var uniform: FalseColorUniform!
     
     public init() {
         super.init(fragmentFunctionName:"falseColorFragment", numberOfInputs:1)
         
-        uniformSettings.colorUniformsUseAlpha = true
-        ({firstColor = Color(red:0.0, green:0.0, blue:0.5, alpha:1.0)})()
-        ({secondColor = Color.red})()
+        uniform = FalseColorUniform(firstColor: vector_float4(0.0, 0.0, 0.5, 1.0),
+                                    secondColor: vector_float4(1.0, 0.0, 0.0, 1.0))
+        
+        uniformHandler = processUniforms(handler:)
+    }
+    
+    func processUniforms(handler: (UnsafeRawPointer, Int) -> Void) -> Void {
+        withUnsafePointer(to: uniform) {
+            handler($0, MemoryLayout<FalseColorUniform>.stride)
+        }
     }
 }

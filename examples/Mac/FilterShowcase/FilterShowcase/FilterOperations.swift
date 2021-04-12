@@ -92,12 +92,12 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Monochrome",
         sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:1.0, initialValue:1.0),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.intensity = sliderValue
+            filter.uniform.intensity = sliderValue
         },
         filterOperationType:.custom(filterSetupFunction:{(camera, filter, outputView) in
             let castFilter = filter as! MonochromeFilter
             camera --> castFilter --> outputView
-            castFilter.color = Color(red:0.0, green:0.0, blue:1.0, alpha:1.0)
+            castFilter.uniform.filterColor = vector_float3(0.0, 0.0, 1.0)
             return nil
         })
     ),
@@ -105,8 +105,10 @@ let filterOperations: Array<FilterOperationInterface> = [
         filter:{FalseColor()},
         listName:"False color",
         titleName:"False Color",
-        sliderConfiguration:.disabled,
-        sliderUpdateCallback:nil,
+        sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:1.0, initialValue:0.5),
+        sliderUpdateCallback: { (filter, sliderValue) in
+            filter.uniform.firstColor = vector_float4(0.0, 0.0, sliderValue, 1.0)
+        },
         filterOperationType:.singleInput
     ),
 //    FilterOperation(

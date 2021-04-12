@@ -29,6 +29,10 @@
 		37C36AF726242F1D008586E7 /* WhiteBalance.metal in Sources */ = {isa = PBXBuildFile; fileRef = 79A81C9C2101016100A3B43A /* WhiteBalance.metal */; };
 		37C36AFB26243098008586E7 /* WhiteBalance.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AFA26243098008586E7 /* WhiteBalance.h */; };
 		37C36AFC26243098008586E7 /* WhiteBalance.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AFA26243098008586E7 /* WhiteBalance.h */; };
+		37C36B0026243767008586E7 /* MonochromeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AFF26243767008586E7 /* MonochromeFilter.h */; };
+		37C36B0126243767008586E7 /* MonochromeFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AFF26243767008586E7 /* MonochromeFilter.h */; };
+		37C36B05262438D6008586E7 /* FalseColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36B04262438D6008586E7 /* FalseColor.h */; };
+		37C36B06262438D6008586E7 /* FalseColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36B04262438D6008586E7 /* FalseColor.h */; };
 		4C280F76213426D6001A985C /* Posterize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C280F75213426D6001A985C /* Posterize.swift */; };
 		4C280F77213426D6001A985C /* Posterize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C280F75213426D6001A985C /* Posterize.swift */; };
 		4C280F79213426EC001A985C /* Posterize.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4C280F78213426EC001A985C /* Posterize.metal */; };
@@ -443,6 +447,8 @@
 		37C36AE226242BD3008586E7 /* RGBAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RGBAdjustment.h; path = Source/Operations/RGBAdjustment.h; sourceTree = "<group>"; };
 		37C36AE726242DA8008586E7 /* HueAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HueAdjustment.h; path = Source/Operations/HueAdjustment.h; sourceTree = "<group>"; };
 		37C36AFA26243098008586E7 /* WhiteBalance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WhiteBalance.h; path = Source/Operations/WhiteBalance.h; sourceTree = "<group>"; };
+		37C36AFF26243767008586E7 /* MonochromeFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MonochromeFilter.h; path = Source/Operations/MonochromeFilter.h; sourceTree = "<group>"; };
+		37C36B04262438D6008586E7 /* FalseColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FalseColor.h; path = Source/Operations/FalseColor.h; sourceTree = "<group>"; };
 		4C280F75213426D6001A985C /* Posterize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Posterize.swift; path = Source/Operations/Posterize.swift; sourceTree = "<group>"; };
 		4C280F78213426EC001A985C /* Posterize.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; name = Posterize.metal; path = Source/Operations/Posterize.metal; sourceTree = "<group>"; };
 		4CC48BED213433CB00817C34 /* StretchDistortion.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; name = StretchDistortion.metal; path = Source/Operations/StretchDistortion.metal; sourceTree = "<group>"; };
@@ -787,6 +793,8 @@
 				37C36AE226242BD3008586E7 /* RGBAdjustment.h */,
 				37C36AE726242DA8008586E7 /* HueAdjustment.h */,
 				37C36AFA26243098008586E7 /* WhiteBalance.h */,
+				37C36AFF26243767008586E7 /* MonochromeFilter.h */,
+				37C36B04262438D6008586E7 /* FalseColor.h */,
 			);
 			name = "Color processing";
 			sourceTree = "<group>";
@@ -979,10 +987,12 @@
 				37C36ACD26241B68008586E7 /* ContrastAdjustment.h in Headers */,
 				BC7BA27B20F2C5E8006B5F4B /* OperationShaderTypes.h in Headers */,
 				37C36AFB26243098008586E7 /* WhiteBalance.h in Headers */,
+				37C36B05262438D6008586E7 /* FalseColor.h in Headers */,
 				79CB6E45210A55CB0042F87B /* BlendShaderTypes.h in Headers */,
 				37C36AE326242BD3008586E7 /* RGBAdjustment.h in Headers */,
 				37C36AC22623E548008586E7 /* GPUImage_bridge.h in Headers */,
 				37C36ADE26242AD4008586E7 /* ExposureAdjustment.h in Headers */,
+				37C36B0026243767008586E7 /* MonochromeFilter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -998,10 +1008,12 @@
 				37C36ACE26241B68008586E7 /* ContrastAdjustment.h in Headers */,
 				BC7BA27C20F2C5E8006B5F4B /* OperationShaderTypes.h in Headers */,
 				37C36AFC26243098008586E7 /* WhiteBalance.h in Headers */,
+				37C36B06262438D6008586E7 /* FalseColor.h in Headers */,
 				79CB6E46210A55CB0042F87B /* BlendShaderTypes.h in Headers */,
 				37C36AE426242BD3008586E7 /* RGBAdjustment.h in Headers */,
 				37C36AC52623E551008586E7 /* GPUImage_bridge.h in Headers */,
 				37C36ADF26242AD4008586E7 /* ExposureAdjustment.h in Headers */,
+				37C36B0126243767008586E7 /* MonochromeFilter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
