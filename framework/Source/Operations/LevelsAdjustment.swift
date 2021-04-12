@@ -1,19 +1,22 @@
-public class LevelsAdjustment: BasicOperation {
-    public var minimum:Color = Color(red:0.0, green:0.0, blue:0.0) { didSet { uniformSettings["minimum"] = minimum } }
-    public var middle:Color = Color(red:1.0, green:1.0, blue:1.0) { didSet { uniformSettings["middle"] = middle } }
-    public var maximum:Color = Color(red:1.0, green:1.0, blue:1.0) { didSet { uniformSettings["maximum"] = maximum } }
-    public var minOutput:Color = Color(red:0.0, green:0.0, blue:0.0) { didSet { uniformSettings["minOutput"] = minOutput } }
-    public var maxOutput:Color = Color(red:1.0, green:1.0, blue:1.0) { didSet { uniformSettings["maxOutput"] = maxOutput } }
+public class LevelsAdjustment: CustomOperation {
+    public var uniform: LevelAdjustmentUniform!
     
     // TODO: Is this an acceptable interface, or do I need to bring this closer to the old implementation?
     
     public init() {
         super.init(fragmentFunctionName: "levelsFragment", numberOfInputs: 1)
         
-        ({minimum = Color(red:0.0, green:0.0, blue:0.0)})()
-        ({middle = Color(red:1.0, green:1.0, blue:1.0)})()
-        ({maximum = Color(red:1.0, green:1.0, blue:1.0)})()
-        ({minOutput = Color(red:0.0, green:0.0, blue:0.0)})()
-        ({maxOutput = Color(red:1.0, green:1.0, blue:1.0)})()
+        uniform = LevelAdjustmentUniform(minimum: vector_float3(0.0, 0.0, 0.0),
+                                         middle: vector_float3(1.0, 1.0, 1.0),
+                                         maximum: vector_float3(1.0, 1.0, 1.0),
+                                         minOutput: vector_float3(0.0, 0.0, 0.0),
+                                         maxOutput: vector_float3(1.0, 1.0, 1.0))
+        uniformHandler = processUniforms(handler:)
+    }
+    
+    func processUniforms(handler: (UnsafeRawPointer, Int) -> Void) -> Void {
+        withUnsafePointer(to: uniform) {
+            handler($0, MemoryLayout<LevelAdjustmentUniform>.stride)
+        }
     }
 }

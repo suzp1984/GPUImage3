@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37C36ABB2623E45D008586E7 /* SaturationAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36ABA2623E45D008586E7 /* SaturationAdjustment.h */; };
+		37C36ABC2623E45D008586E7 /* SaturationAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36ABA2623E45D008586E7 /* SaturationAdjustment.h */; };
+		37C36AC22623E548008586E7 /* GPUImage_bridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AC12623E548008586E7 /* GPUImage_bridge.h */; };
+		37C36AC52623E551008586E7 /* GPUImage_bridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AC12623E548008586E7 /* GPUImage_bridge.h */; };
+		37C36ACD26241B68008586E7 /* ContrastAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36ACC26241B68008586E7 /* ContrastAdjustment.h */; };
+		37C36ACE26241B68008586E7 /* ContrastAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36ACC26241B68008586E7 /* ContrastAdjustment.h */; };
+		37C36AD426242271008586E7 /* BrightnessAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AD326242271008586E7 /* BrightnessAdjustment.h */; };
+		37C36AD526242271008586E7 /* BrightnessAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AD326242271008586E7 /* BrightnessAdjustment.h */; };
+		37C36AD9262423AB008586E7 /* LevelsAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AD8262423AB008586E7 /* LevelsAdjustment.h */; };
+		37C36ADA262423AB008586E7 /* LevelsAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AD8262423AB008586E7 /* LevelsAdjustment.h */; };
 		4C280F76213426D6001A985C /* Posterize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C280F75213426D6001A985C /* Posterize.swift */; };
 		4C280F77213426D6001A985C /* Posterize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C280F75213426D6001A985C /* Posterize.swift */; };
 		4C280F79213426EC001A985C /* Posterize.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4C280F78213426EC001A985C /* Posterize.metal */; };
@@ -412,6 +422,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37C36ABA2623E45D008586E7 /* SaturationAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SaturationAdjustment.h; path = Source/Operations/SaturationAdjustment.h; sourceTree = "<group>"; };
+		37C36AC12623E548008586E7 /* GPUImage_bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImage_bridge.h; path = Source/GPUImage_bridge.h; sourceTree = "<group>"; };
+		37C36ACC26241B68008586E7 /* ContrastAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ContrastAdjustment.h; path = Source/Operations/ContrastAdjustment.h; sourceTree = "<group>"; };
+		37C36AD326242271008586E7 /* BrightnessAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BrightnessAdjustment.h; path = Source/Operations/BrightnessAdjustment.h; sourceTree = "<group>"; };
+		37C36AD8262423AB008586E7 /* LevelsAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LevelsAdjustment.h; path = Source/Operations/LevelsAdjustment.h; sourceTree = "<group>"; };
 		4C280F75213426D6001A985C /* Posterize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Posterize.swift; path = Source/Operations/Posterize.swift; sourceTree = "<group>"; };
 		4C280F78213426EC001A985C /* Posterize.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; name = Posterize.metal; path = Source/Operations/Posterize.metal; sourceTree = "<group>"; };
 		4CC48BED213433CB00817C34 /* StretchDistortion.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; name = StretchDistortion.metal; path = Source/Operations/StretchDistortion.metal; sourceTree = "<group>"; };
@@ -748,6 +763,10 @@
 				79EB1B732125CBD50049135E /* AmatorkaFilter.swift */,
 				79EB1B792125CC360049135E /* MissEtikateFilter.swift */,
 				BC25F8A022C15E2600CBBD15 /* SoftElegance.swift */,
+				37C36ABA2623E45D008586E7 /* SaturationAdjustment.h */,
+				37C36ACC26241B68008586E7 /* ContrastAdjustment.h */,
+				37C36AD326242271008586E7 /* BrightnessAdjustment.h */,
+				37C36AD8262423AB008586E7 /* LevelsAdjustment.h */,
 			);
 			name = "Color processing";
 			sourceTree = "<group>";
@@ -789,6 +808,7 @@
 		BCE0BE7220D6DE610006E120 = {
 			isa = PBXGroup;
 			children = (
+				37C36AC12623E548008586E7 /* GPUImage_bridge.h */,
 				BCE0BE9420D6E37D0006E120 /* Base */,
 				BCE0BE9520D6E3830006E120 /* Inputs */,
 				BCE0BE9620D6E38F0006E120 /* Outputs */,
@@ -931,9 +951,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C36AD426242271008586E7 /* BrightnessAdjustment.h in Headers */,
+				37C36ABB2623E45D008586E7 /* SaturationAdjustment.h in Headers */,
+				37C36AD9262423AB008586E7 /* LevelsAdjustment.h in Headers */,
 				BCC6AB65210E5FF600F9803A /* TexelSamplingTypes.h in Headers */,
+				37C36ACD26241B68008586E7 /* ContrastAdjustment.h in Headers */,
 				BC7BA27B20F2C5E8006B5F4B /* OperationShaderTypes.h in Headers */,
 				79CB6E45210A55CB0042F87B /* BlendShaderTypes.h in Headers */,
+				37C36AC22623E548008586E7 /* GPUImage_bridge.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -941,9 +966,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37C36AD526242271008586E7 /* BrightnessAdjustment.h in Headers */,
+				37C36ABC2623E45D008586E7 /* SaturationAdjustment.h in Headers */,
+				37C36ADA262423AB008586E7 /* LevelsAdjustment.h in Headers */,
 				BCC6AB66210E5FF600F9803A /* TexelSamplingTypes.h in Headers */,
+				37C36ACE26241B68008586E7 /* ContrastAdjustment.h in Headers */,
 				BC7BA27C20F2C5E8006B5F4B /* OperationShaderTypes.h in Headers */,
 				79CB6E46210A55CB0042F87B /* BlendShaderTypes.h in Headers */,
+				37C36AC52623E551008586E7 /* GPUImage_bridge.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1596,6 +1626,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.redqueencoder.GPUImage;
 				PRODUCT_NAME = GPUImage;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = Source/GPUImage_bridge.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1622,6 +1653,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.redqueencoder.GPUImage;
 				PRODUCT_NAME = GPUImage;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = Source/GPUImage_bridge.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1651,6 +1683,7 @@
 				PRODUCT_NAME = GPUImage;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = Source/GPUImage_bridge.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -1679,6 +1712,7 @@
 				PRODUCT_NAME = GPUImage;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = Source/GPUImage_bridge.h;
 			};
 			name = Release;
 		};

@@ -1,11 +1,7 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
+#include "ContrastAdjustment.h"
 using namespace metal;
-
-typedef struct
-{
-    float contrast;
-} ContrastUniform;
 
 fragment half4 contrastFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                                 texture2d<half> inputTexture [[texture(0)]],

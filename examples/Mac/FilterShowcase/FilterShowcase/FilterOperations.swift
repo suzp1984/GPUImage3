@@ -8,7 +8,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Saturation",
         sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:2.0, initialValue:1.0),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.saturation = sliderValue
+            filter.uniform.saturation = sliderValue
         },
         filterOperationType:.singleInput
     ),
@@ -18,7 +18,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Contrast",
         sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:4.0, initialValue:1.0),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.contrast = sliderValue
+            filter.uniform.contrast = sliderValue
         },
         filterOperationType:.singleInput
     ),
@@ -28,7 +28,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Brightness",
         sliderConfiguration:.enabled(minimumValue:-1.0, maximumValue:1.0, initialValue:0.0),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.brightness = sliderValue
+            filter.uniform.brightness = sliderValue
         },
         filterOperationType:.singleInput
     ),
@@ -38,11 +38,11 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Levels",
         sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:1.0, initialValue:0.0),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.minimum = Color(red:Float(sliderValue), green:Float(sliderValue), blue:Float(sliderValue))
-            filter.middle = Color(red:1.0, green:1.0, blue:1.0)
-            filter.maximum = Color(red:1.0, green:1.0, blue:1.0)
-            filter.minOutput = Color(red:0.0, green:0.0, blue:0.0)
-            filter.maxOutput = Color(red:1.0, green:1.0, blue:1.0)
+            filter.uniform.minimum = vector_float3(Float(sliderValue), Float(sliderValue), Float(sliderValue))
+            filter.uniform.middle = vector_float3(1.0, 1.0, 1.0)
+            filter.uniform.maximum = vector_float3(1.0, 1.0, 1.0)
+            filter.uniform.minOutput = vector_float3(0.0, 0.0, 0.0)
+            filter.uniform.maxOutput = vector_float3(1.0, 1.0, 1.0)
         },
         filterOperationType:.singleInput
     ),

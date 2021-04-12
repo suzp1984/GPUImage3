@@ -1,12 +1,8 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
+#include "BrightnessAdjustment.h"
 
 using namespace metal;
-
-typedef struct
-{
-    float brightness;
-} BrightnessUniform;
 
 fragment half4 brightnessFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                                   texture2d<half> inputTexture [[texture(0)]],

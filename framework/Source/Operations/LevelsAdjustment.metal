@@ -1,15 +1,7 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
+#include "LevelsAdjustment.h"
 using namespace metal;
-
-typedef struct
-{
-    float3 minimum;
-    float3 middle;
-    float3 maximum;
-    float3 minOutput;
-    float3 maxOutput;
-} LevelAdjustmentUniform;
 
 // Possibly convert these to functions
 #define LevelsControlInputRange(color, minInput, maxInput)     min(max(color - minInput, half3(0.0)) / (maxInput - minInput), half3(1.0))

@@ -31,7 +31,8 @@ class FilterShowcaseWindowController: NSWindowController {
 
         do {
             videoCamera = try Camera(sessionPreset:.hd1280x720, location:.frontFacing)
-            videoCamera.runBenchmark = true
+            videoCamera.runBenchmark = false
+            videoCamera.logFPS = true
             videoCamera.startCapture()
         } catch {
             fatalError("Couldn't initialize camera with error: \(error)")

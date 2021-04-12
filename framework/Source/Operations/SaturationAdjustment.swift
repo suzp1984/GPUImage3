@@ -1,9 +1,18 @@
-public class SaturationAdjustment: BasicOperation {
-    public var saturation:Float = 1.0 { didSet { uniformSettings["saturation"] = saturation } }
+public class SaturationAdjustment: CustomOperation {
     
+    public var uniform: SaturationUniform = SaturationUniform(saturation: 1.0)
+       
     public init() {
         super.init(fragmentFunctionName:"saturationFragment", numberOfInputs:1)
-        
-        ({saturation = 1.0})()
+                
+        uniformHandler = processUniforms(handler:)
+
     }
+    
+    func processUniforms(handler: (UnsafeRawPointer, Int) -> Void) -> Void {
+        withUnsafePointer(to: uniform) {
+            handler($0, MemoryLayout<SaturationUniform>.stride)
+        }
+    }
+    
 }

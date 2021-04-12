@@ -1,11 +1,7 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
+#include "SaturationAdjustment.h"
 using namespace metal;
-
-typedef struct
-{
-    float saturation;
-} SaturationUniform;
 
 fragment half4 saturationFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                                 texture2d<half> inputTexture [[texture(0)]],

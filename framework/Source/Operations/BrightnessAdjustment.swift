@@ -1,9 +1,16 @@
-public class BrightnessAdjustment: BasicOperation {
-    public var brightness:Float = 0.0 { didSet { uniformSettings["brightness"] = brightness } }
+public class BrightnessAdjustment: CustomOperation {
+    public var uniform: BrightnessUniform!
     
     public init() {
         super.init(fragmentFunctionName:"brightnessFragment", numberOfInputs:1)
         
-        ({brightness = 0.0})()
+        uniform = BrightnessUniform(brightness: 0.0)
+        uniformHandler = processUniforms(handler:)
+    }
+    
+    func processUniforms(handler: (UnsafeRawPointer, Int) -> Void) -> Void {
+        withUnsafePointer(to: uniform) {
+            handler($0, MemoryLayout<BrightnessUniform>.stride)
+        }
     }
 }
