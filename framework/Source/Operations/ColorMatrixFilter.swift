@@ -1,12 +1,18 @@
-public class ColorMatrixFilter: BasicOperation {
-    public var intensity:Float = 1.0 { didSet { uniformSettings["intensity"] = intensity } }
-    public var colorMatrix:Matrix4x4 = Matrix4x4.identity { didSet { uniformSettings["colorMatrix"] = colorMatrix } }
+public class ColorMatrixFilter: CustomOperation {
+    
+    public var uniform: ColorMatrixUniform!
     
     public init() {
         
         super.init(fragmentFunctionName:"colorMatrixFragment", numberOfInputs:1)
         
-        ({intensity = 1.0})()
-        ({colorMatrix = Matrix4x4.identity})()
+        uniform = ColorMatrixUniform(intensity: 1.0, colorMatrix: matrix_identity_float4x4)
+        uniformHandler = processUniforms(handler:)
+    }
+    
+    func processUniforms(handler: (UnsafeRawPointer, Int) -> Void) -> Void {
+        withUnsafePointer(to: uniform) {
+            handler($0, MemoryLayout<ColorMatrixUniform>.stride)
+        }
     }
 }

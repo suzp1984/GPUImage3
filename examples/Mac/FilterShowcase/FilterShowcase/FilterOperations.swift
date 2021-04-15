@@ -211,7 +211,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Sepia Tone",
         sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:1.0, initialValue:1.0),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.intensity = sliderValue
+            filter.uniform.intensity = sliderValue
         },
         filterOperationType:.singleInput
     ),

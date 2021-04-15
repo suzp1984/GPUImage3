@@ -20,3 +20,4 @@
 #import "Operations/GammaAdjustment.h"
 #import "Operations/HighlightsAndShadows.h"
 #import "Operations/Haze.h"
+#import "Operations/ColorMatrixFilter.h"
