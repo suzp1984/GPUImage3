@@ -18,3 +18,4 @@
 #import "Operations/FalseColor.h"
 #import "Operations/Sharpen.h"
 #import "Operations/GammaAdjustment.h"
+#import "Operations/HighlightsAndShadows.h"

@@ -1,11 +1,17 @@
-public class HighlightsAndShadows: BasicOperation {
-    public var shadows:Float = 0.0 { didSet { uniformSettings["shadows"] = shadows } }
-    public var highlights:Float = 1.0 { didSet { uniformSettings["highlights"] = highlights } }
+public class HighlightsAndShadows: CustomOperation {
+    
+    public var uniform: HighlightShadowUniform!
     
     public init() {
         super.init(fragmentFunctionName:"highlightShadowFragment", numberOfInputs:1)
         
-        ({shadows = 0.0})()
-        ({highlights = 1.0})()
+        uniform = HighlightShadowUniform(shadows: 0.0, highlights: 1.0)
+        uniformHandler = processUniforms(handler:)
+    }
+    
+    func processUniforms(handler: (UnsafeRawPointer, Int) -> Void) -> Void {
+        withUnsafePointer(to: uniform) {
+            handler($0, MemoryLayout<HighlightShadowUniform>.stride)
+        }
     }
 }

@@ -191,7 +191,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Highlights and Shadows",
         sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:1.0, initialValue:1.0),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.highlights = sliderValue
+            filter.uniform.highlights = sliderValue
         },
         filterOperationType:.singleInput
     ),

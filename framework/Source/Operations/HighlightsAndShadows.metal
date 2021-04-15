@@ -1,12 +1,7 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
 using namespace metal;
-
-typedef struct
-{
-    float shadows;
-    float highlights;
-} HighlightShadowUniform;
+#include "HighlightsAndShadows.h"
 
 fragment half4 highlightShadowFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                                 texture2d<half> inputTexture [[texture(0)]],
