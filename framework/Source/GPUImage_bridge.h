@@ -22,3 +22,4 @@
 #import "Operations/Haze.h"
 #import "Operations/ColorMatrixFilter.h"
 #import "Operations/LookupFilter.h"
+#import "Operations/Solarize.h"

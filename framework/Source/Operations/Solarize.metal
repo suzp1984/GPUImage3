@@ -1,10 +1,7 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
 using namespace metal;
-
-typedef struct {
-    float threshold;
-} SolarizeUniform;
+#include "Solarize.h"
 
 fragment half4 solarizeFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                                 texture2d<half> inputTexture [[texture(0)]],
