@@ -166,22 +166,14 @@ let filterOperations: Array<FilterOperationInterface> = [
 //        },
 //        filterOperationType:.singleInput
 //    ),
-//    FilterOperation(
-//        filter:{Luminance()},
-//        listName:"Masking",
-//        titleName:"Mask Example",
-//        sliderConfiguration:.disabled,
-//        sliderUpdateCallback: nil,
-//        filterOperationType:.custom(filterSetupFunction:{(camera, filter, outputView) in
-//            let castFilter = filter as! Luminance
-//            let maskImage = PictureInput(imageName:"Mask.png")
-//            castFilter.drawUnmodifiedImageOutsideOfMask = false
-//            castFilter.mask = maskImage
-//            maskImage.processImage()
-//            camera --> castFilter --> outputView
-//            return nil
-//        })
-//    ),
+    FilterOperation(
+        filter:{Luminance()},
+        listName:"Masking",
+        titleName:"Mask Example",
+        sliderConfiguration:.disabled,
+        sliderUpdateCallback: nil,
+        filterOperationType:.singleInput
+    ),
     FilterOperation(
         filter:{GammaAdjustment()},
         listName:"Gamma",

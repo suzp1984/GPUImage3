@@ -195,7 +195,12 @@ open class CustomOperation: AbstractOperation {
                                          useNormalizedTextureCoordinates: useNormalizedTextureCoordinates,
                                          outputTexture: outputTexture)
             }
+        } else {
+            commandBuffer.renderQuad(pipelineState: pipelineState,
+                                     inputTextures: inputTextures,
+                                     outputTexture: outputTexture)
         }
+        
     }
 }
 
