@@ -4,6 +4,12 @@ public class SoftElegance: OperationGroup {
     let gaussianBlur = GaussianBlur()
     let alphaBlend = AlphaBlend()
     
+    public var intensity: Float! {
+        didSet {
+            lookup1.uniform.intensity = intensity
+            lookup2.uniform.intensity = intensity
+        }
+    }
     public override init() {
         super.init()
         

@@ -7,6 +7,5 @@ public class AmatorkaFilter: LookupFilter {
         super.init()
         
         ({lookupImage = PictureInput(imageName:"lookup_amatorka.png")})()
-        ({intensity = 1.0})()
     }
 }

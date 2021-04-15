@@ -1,11 +1,7 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
 using namespace metal;
-
-typedef struct
-{
-    float intensity;
-} IntensityUniform;
+#include "LookupFilter.h"
 
 fragment half4 lookupFragment(TwoInputVertexIO fragmentInput [[stage_in]],
                                 texture2d<half> inputTexture [[texture(0)]],

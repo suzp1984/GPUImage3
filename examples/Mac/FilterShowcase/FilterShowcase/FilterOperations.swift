@@ -221,7 +221,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Amatorka (Lookup)",
         sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:1.0, initialValue:1.0),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.intensity = sliderValue
+            filter.uniform.intensity = sliderValue
     },
         filterOperationType:.singleInput
     ),
@@ -231,7 +231,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Miss Etikate (Lookup)",
         sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:1.0, initialValue:1.0),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.intensity = sliderValue
+            filter.uniform.intensity = sliderValue
     },
         filterOperationType:.singleInput
     ),
@@ -239,8 +239,10 @@ let filterOperations: Array<FilterOperationInterface> = [
         filter:{SoftElegance()},
         listName:"Soft elegance (Lookup)",
         titleName:"Soft Elegance (Lookup)",
-        sliderConfiguration:.disabled,
-        sliderUpdateCallback: nil,
+        sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:1.0, initialValue:1.0),
+        sliderUpdateCallback: {(filter, sliderValue) in
+            filter.intensity = sliderValue
+    },
         filterOperationType:.singleInput
     ),
     FilterOperation(

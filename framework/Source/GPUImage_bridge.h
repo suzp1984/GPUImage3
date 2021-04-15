@@ -21,3 +21,4 @@
 #import "Operations/HighlightsAndShadows.h"
 #import "Operations/Haze.h"
 #import "Operations/ColorMatrixFilter.h"
+#import "Operations/LookupFilter.h"
