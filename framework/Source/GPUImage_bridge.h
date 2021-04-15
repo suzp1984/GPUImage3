@@ -17,3 +17,4 @@
 #import "Operations/MonochromeFilter.h"
 #import "Operations/FalseColor.h"
 #import "Operations/Sharpen.h"
+#import "Operations/GammaAdjustment.h"

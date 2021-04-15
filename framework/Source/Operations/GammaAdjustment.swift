@@ -1,9 +1,17 @@
-public class GammaAdjustment: BasicOperation {
-    public var gamma:Float = 1.0 { didSet { uniformSettings["gamma"] = gamma } }
+public class GammaAdjustment: CustomOperation {
+    
+    public var uniform: GammaUniform!
     
     public init() {
         super.init(fragmentFunctionName:"gammaFragment", numberOfInputs:1)
         
-        ({gamma = 1.0})()
+        uniform = GammaUniform(gamma: 1.0)
+        uniformHandler = processUniforms(handler:)
+    }
+    
+    func processUniforms(handler: (UnsafeRawPointer, Int) -> Void) -> Void {
+        withUnsafePointer(to: uniform) {
+            handler($0, MemoryLayout<GammaUniform>.stride)
+        }
     }
 }

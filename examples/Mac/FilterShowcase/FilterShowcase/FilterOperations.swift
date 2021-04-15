@@ -180,7 +180,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Gamma",
         sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:3.0, initialValue:1.0),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.gamma = sliderValue
+            filter.uniform.gamma = sliderValue
         },
         filterOperationType:.singleInput
     ),

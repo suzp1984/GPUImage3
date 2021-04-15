@@ -2,10 +2,8 @@
 #include "OperationShaderTypes.h"
 using namespace metal;
 
-typedef struct
-{
-    float gamma;
-} GammaUniform;
+#include "GammaAdjustment.h"
+
 
 fragment half4 gammaFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                                   texture2d<half> inputTexture [[texture(0)]],
