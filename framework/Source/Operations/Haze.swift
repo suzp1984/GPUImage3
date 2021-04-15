@@ -1,11 +1,17 @@
-public class Haze: BasicOperation {
-    public var distance:Float = 0.2 { didSet { uniformSettings["hazeDistance"] = distance } }
-    public var slope:Float = 0.0 { didSet { uniformSettings["slope"] = slope } }
+public class Haze: CustomOperation {
+    
+    public var uniform: HazeUniform!
     
     public init() {
         super.init(fragmentFunctionName:"hazeFragment", numberOfInputs:1)
         
-        ({distance = 0.2})()
-        ({slope = 0.0})()
+        uniform = HazeUniform(hazeDistance: 0.2, slope: 0.0)
+        uniformHandler = processUniforms(handler:)
+    }
+    
+    func processUniforms(handler: (UnsafeRawPointer, Int) -> Void) -> Void {
+        withUnsafePointer(to: uniform) {
+            handler($0, MemoryLayout<HazeUniform>.stride)
+        }
     }
 }

@@ -201,7 +201,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Haze / UV",
         sliderConfiguration:.enabled(minimumValue:-0.2, maximumValue:0.2, initialValue:0.2),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.distance = sliderValue
+            filter.uniform.hazeDistance = sliderValue
         },
         filterOperationType:.singleInput
     ),
