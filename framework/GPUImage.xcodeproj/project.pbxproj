@@ -47,6 +47,8 @@
 		37C36CAC262884AB008586E7 /* LookupFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36CAA262884AB008586E7 /* LookupFilter.h */; };
 		37C36CB026288945008586E7 /* Solarize.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36CAF26288945008586E7 /* Solarize.h */; };
 		37C36CB126288945008586E7 /* Solarize.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36CAF26288945008586E7 /* Solarize.h */; };
+		37C36CB52629199D008586E7 /* Vibrance.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36CB42629199D008586E7 /* Vibrance.h */; };
+		37C36CB62629199D008586E7 /* Vibrance.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36CB42629199D008586E7 /* Vibrance.h */; };
 		4C280F76213426D6001A985C /* Posterize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C280F75213426D6001A985C /* Posterize.swift */; };
 		4C280F77213426D6001A985C /* Posterize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C280F75213426D6001A985C /* Posterize.swift */; };
 		4C280F79213426EC001A985C /* Posterize.metal in Sources */ = {isa = PBXBuildFile; fileRef = 4C280F78213426EC001A985C /* Posterize.metal */; };
@@ -470,6 +472,7 @@
 		37C36C9F26287E37008586E7 /* ColorMatrixFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ColorMatrixFilter.h; path = Source/Operations/ColorMatrixFilter.h; sourceTree = "<group>"; };
 		37C36CAA262884AB008586E7 /* LookupFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LookupFilter.h; path = Source/Operations/LookupFilter.h; sourceTree = "<group>"; };
 		37C36CAF26288945008586E7 /* Solarize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Solarize.h; path = Source/Operations/Solarize.h; sourceTree = "<group>"; };
+		37C36CB42629199D008586E7 /* Vibrance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Vibrance.h; path = Source/Operations/Vibrance.h; sourceTree = "<group>"; };
 		4C280F75213426D6001A985C /* Posterize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Posterize.swift; path = Source/Operations/Posterize.swift; sourceTree = "<group>"; };
 		4C280F78213426EC001A985C /* Posterize.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; name = Posterize.metal; path = Source/Operations/Posterize.metal; sourceTree = "<group>"; };
 		4CC48BED213433CB00817C34 /* StretchDistortion.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; name = StretchDistortion.metal; path = Source/Operations/StretchDistortion.metal; sourceTree = "<group>"; };
@@ -823,6 +826,7 @@
 				37C36C9A26287CC4008586E7 /* Haze.h */,
 				37C36C9F26287E37008586E7 /* ColorMatrixFilter.h */,
 				37C36CAA262884AB008586E7 /* LookupFilter.h */,
+				37C36CB42629199D008586E7 /* Vibrance.h */,
 			);
 			name = "Color processing";
 			sourceTree = "<group>";
@@ -1013,6 +1017,7 @@
 				37C36B0A2624486C008586E7 /* Sharpen.h in Headers */,
 				37C36C9B26287CC4008586E7 /* Haze.h in Headers */,
 				37C36AD9262423AB008586E7 /* LevelsAdjustment.h in Headers */,
+				37C36CB52629199D008586E7 /* Vibrance.h in Headers */,
 				37C36AE826242DA8008586E7 /* HueAdjustment.h in Headers */,
 				BCC6AB65210E5FF600F9803A /* TexelSamplingTypes.h in Headers */,
 				37C36ACD26241B68008586E7 /* ContrastAdjustment.h in Headers */,
@@ -1041,6 +1046,7 @@
 				37C36B0B2624486C008586E7 /* Sharpen.h in Headers */,
 				37C36C9C26287CC4008586E7 /* Haze.h in Headers */,
 				37C36ADA262423AB008586E7 /* LevelsAdjustment.h in Headers */,
+				37C36CB62629199D008586E7 /* Vibrance.h in Headers */,
 				37C36AE926242DA8008586E7 /* HueAdjustment.h in Headers */,
 				BCC6AB66210E5FF600F9803A /* TexelSamplingTypes.h in Headers */,
 				37C36ACE26241B68008586E7 /* ContrastAdjustment.h in Headers */,

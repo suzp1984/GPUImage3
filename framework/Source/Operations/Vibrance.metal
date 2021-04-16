@@ -1,11 +1,7 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
 using namespace metal;
-
-typedef struct
-{
-    float vibrance;
-} VibranceUniform;
+#include "Vibrance.h"
 
 fragment half4 vibranceFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                                  texture2d<half> inputTexture [[texture(0)]],

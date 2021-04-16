@@ -23,3 +23,4 @@
 #import "Operations/ColorMatrixFilter.h"
 #import "Operations/LookupFilter.h"
 #import "Operations/Solarize.h"
+#import "Operations/Vibrance.h"

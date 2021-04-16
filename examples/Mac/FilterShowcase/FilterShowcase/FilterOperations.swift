@@ -269,7 +269,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Vibrance",
         sliderConfiguration:.enabled(minimumValue:-1.2, maximumValue:1.2, initialValue:0.0),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.vibrance = sliderValue
+            filter.uniform.vibrance = sliderValue
         },
         filterOperationType:.singleInput
     ),
