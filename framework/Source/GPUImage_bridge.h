@@ -25,3 +25,4 @@
 #import "Operations/Solarize.h"
 #import "Operations/Vibrance.h"
 #import "Operations/HighlightAndShadowTint.h"
+#import "Operations/LuminanceThreshold.h"

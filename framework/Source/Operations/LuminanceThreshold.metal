@@ -1,12 +1,8 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
+#include "LuminanceThreshold.h"
 
 using namespace metal;
-
-typedef struct
-{
-    float threshold;
-} ThresholdUniform;
 
 fragment half4 thresholdFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                                   texture2d<half> inputTexture [[texture(0)]],

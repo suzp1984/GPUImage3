@@ -299,7 +299,7 @@ let filterOperations: Array<FilterOperationInterface> = [
 //            blendFilter.mix = 0.75
 //            camera --> blendFilter
 //            camera --> castFilter --> histogramGraph --> blendFilter --> outputView
-//            
+//
 //            return blendFilter
 //        })
 //    ),
@@ -320,7 +320,7 @@ let filterOperations: Array<FilterOperationInterface> = [
 //        filterOperationType:.custom(filterSetupFunction:{(camera, filter, outputView) in
 //            let castFilter = filter as! AverageColorExtractor
 //            let colorGenerator = SolidColorGenerator(size:outputView.sizeInPixels)
-//            
+//
 //            castFilter.extractedColorCallback = {color in
 //                colorGenerator.renderColor(color)
 //            }
@@ -338,11 +338,11 @@ let filterOperations: Array<FilterOperationInterface> = [
 //        filterOperationType:.custom(filterSetupFunction:{(camera, filter, outputView) in
 //            let castFilter = filter as! AverageLuminanceExtractor
 //            let colorGenerator = SolidColorGenerator(size:outputView.sizeInPixels)
-//            
+//
 //            castFilter.extractedLuminanceCallback = {luminosity in
 //                colorGenerator.renderColor(Color(red:luminosity, green:luminosity, blue:luminosity))
 //            }
-//            
+//
 //            camera --> castFilter
 //            colorGenerator --> outputView
 //            return colorGenerator
@@ -354,7 +354,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Luminance Threshold",
         sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:1.0, initialValue:0.5),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.threshold = sliderValue
+            filter.uniform.threshold = sliderValue
         },
         filterOperationType:.singleInput
     ),
