@@ -362,7 +362,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         filter:{AdaptiveThreshold()},
         listName:"Adaptive threshold",
         titleName:"Adaptive Threshold",
-        sliderConfiguration:.enabled(minimumValue:1.0, maximumValue:20.0, initialValue:1.0),
+        sliderConfiguration:.enabled(minimumValue:1.0, maximumValue:20.0, initialValue:20.0),
         sliderUpdateCallback: {(filter, sliderValue) in
             filter.blurRadiusInPixels = sliderValue
         },

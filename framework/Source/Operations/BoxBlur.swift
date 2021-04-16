@@ -4,7 +4,7 @@ func roundToOdd(_ number: Float) -> Int {
     return 2 * Int(floor(number / 2.0)) + 1
 }
 
-public class BoxBlur: BasicOperation {
+public class BoxBlur: CustomOperation {
     public var blurRadiusInPixels:Float = 2.0 {
         didSet
         {

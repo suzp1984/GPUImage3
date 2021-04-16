@@ -6,7 +6,7 @@ public class AdaptiveThreshold: OperationGroup {
     let adaptiveThreshold = BasicOperation(fragmentFunctionName:"adaptiveThresholdFragment", numberOfInputs:2)
     
     public override init() {
-        blurRadiusInPixels = 4.0
+        blurRadiusInPixels = 20.0
         super.init()
         
         self.configureGroup{input, output in
