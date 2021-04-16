@@ -279,7 +279,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Highlight / Shadow Tint",
         sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:1.0, initialValue:0.0),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.shadowTintIntensity = sliderValue
+            filter.uniform.shadowTintIntensity = sliderValue
         },
         filterOperationType:.singleInput
     ),

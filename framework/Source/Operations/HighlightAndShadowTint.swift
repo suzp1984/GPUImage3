@@ -1,15 +1,20 @@
-public class HighlightAndShadowTint: BasicOperation {
-    public var shadowTintIntensity:Float = 0.0 { didSet { uniformSettings["shadowTintIntensity"] = shadowTintIntensity } }
-    public var highlightTintIntensity:Float = 0.0 { didSet { uniformSettings["highlightTintIntensity"] = highlightTintIntensity } }
-    public var shadowTintColor:Color = Color.red { didSet { uniformSettings["shadowTintColor"] = shadowTintColor } }
-    public var highlightTintColor:Color = Color.blue { didSet { uniformSettings["highlightTintColor"] = highlightTintColor } }
+public class HighlightAndShadowTint: CustomOperation {
+    
+    public var uniform: HighlightShadowTintUniform!
     
     public init() {
         super.init(fragmentFunctionName:"highlightShadowTintFragment", numberOfInputs:1)
-        
-        ({shadowTintIntensity = 0.0})()
-        ({highlightTintIntensity = 0.0})()
-        ({shadowTintColor = Color.red})()
-        ({highlightTintColor = Color.blue})()
+
+        uniform = HighlightShadowTintUniform(shadowTintIntensity: 0.0,
+                                             highlightTintIntensity: 0.0,
+                                             shadowTintColor: vector_float3(1.0, 0.0, 0.0),
+                                             highlightTintColor: vector_float3(0.0, 0.0, 1.0))
+        uniformHandler = processUniforms(handler:)
+    }
+    
+    func processUniforms(handler: (UnsafeRawPointer, Int) -> Void) -> Void {
+        withUnsafePointer(to: uniform) {
+            handler($0, MemoryLayout<HighlightShadowTintUniform>.stride)
+        }
     }
 }

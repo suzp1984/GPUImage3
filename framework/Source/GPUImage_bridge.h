@@ -24,3 +24,4 @@
 #import "Operations/LookupFilter.h"
 #import "Operations/Solarize.h"
 #import "Operations/Vibrance.h"
+#import "Operations/HighlightAndShadowTint.h"

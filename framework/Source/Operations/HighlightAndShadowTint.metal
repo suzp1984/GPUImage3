@@ -1,14 +1,7 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
 using namespace metal;
-
-typedef struct
-{
-    float shadowTintIntensity;
-    float highlightTintIntensity;
-    float3 shadowTintColor;
-    float3 highlightTintColor;
-} HighlightShadowTintUniform;
+#include "HighlightAndShadowTint.h"
 
 fragment half4 highlightShadowTintFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                                   texture2d<half> inputTexture [[texture(0)]],
