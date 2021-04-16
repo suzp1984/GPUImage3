@@ -167,14 +167,6 @@ let filterOperations: Array<FilterOperationInterface> = [
 //        filterOperationType:.singleInput
 //    ),
     FilterOperation(
-        filter:{Luminance()},
-        listName:"Masking",
-        titleName:"Mask Example",
-        sliderConfiguration:.disabled,
-        sliderUpdateCallback: nil,
-        filterOperationType:.singleInput
-    ),
-    FilterOperation(
         filter:{GammaAdjustment()},
         listName:"Gamma",
         titleName:"Gamma",
