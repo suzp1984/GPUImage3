@@ -1,10 +1,7 @@
 #include <metal_stdlib>
 #include "TexelSamplingTypes.h"
+#include "PrewittEdgeDetection.h"
 using namespace metal;
-
-typedef struct {
-    float edgeStrength;
-} PrewittEdgeDetectionUniform;
 
 fragment half4 prewittEdgeDetectionFragment(NearbyTexelVertexIO fragmentInput [[stage_in]],
                                        texture2d<half> inputTexture [[texture(0)]],

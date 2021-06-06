@@ -465,7 +465,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Prewitt Edge Detection",
         sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:1.0, initialValue:1.0),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.edgeStrength = sliderValue
+            filter.uniform.edgeStrength = sliderValue
         },
         filterOperationType:.singleInput
     ),
