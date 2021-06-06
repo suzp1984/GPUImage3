@@ -1,11 +1,16 @@
-public class Crosshatch: BasicOperation {
-    public var crossHatchSpacing:Float = 0.03 { didSet { uniformSettings["crossHatchSpacing"] = crossHatchSpacing } }
-    public var lineWidth:Float = 0.003 { didSet { uniformSettings["lineWidth"] = lineWidth } }
+public class Crosshatch: CustomOperation {
+    public var uniform: CrosshatchUniform!
     
     public init() {
         super.init(fragmentFunctionName:"crosshatchFragment", numberOfInputs:1)
         
-        ({crossHatchSpacing = 0.03})()
-        ({lineWidth = 0.003})()
+        uniform = CrosshatchUniform(crossHatchSpacing: 0.03, lineWidth: 0.003)
+        uniformHandler = processUniforms(handler:)
+    }
+    
+    func processUniforms(handler: (UnsafeRawPointer, Int) -> Void) -> Void {
+        withUnsafePointer(to: uniform) {
+            handler($0, MemoryLayout<CrosshatchUniform>.stride)
+        }
     }
 }

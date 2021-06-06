@@ -30,3 +30,4 @@
 #import "Operations/PolarPixellate.h"
 #import "Operations/PolkaDot.h"
 #import "Operations/HalfTone.h"
+#import "Operations/Crosshatch.h"

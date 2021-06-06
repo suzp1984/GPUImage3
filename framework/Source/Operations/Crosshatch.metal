@@ -1,12 +1,9 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
 #include "BlendShaderTypes.h"
-using namespace metal;
+#include "Crosshatch.h"
 
-typedef struct {
-    float crossHatchSpacing;
-    float lineWidth;
-} CrosshatchUniform;
+using namespace metal;
 
 fragment half4 crosshatchFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                              texture2d<half> inputTexture [[texture(0)]],

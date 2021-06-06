@@ -445,7 +445,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Crosshatch",
         sliderConfiguration:.enabled(minimumValue:0.01, maximumValue:0.06, initialValue:0.03),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.crossHatchSpacing = sliderValue
+            filter.uniform.crossHatchSpacing = sliderValue
         },
         filterOperationType:.singleInput
     ),
