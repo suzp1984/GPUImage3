@@ -1,10 +1,7 @@
 #include <metal_stdlib>
 #include "TexelSamplingTypes.h"
+#include "SobelEdgeDetection.h"
 using namespace metal;
-
-typedef struct {
-    float edgeStrength;
-} SobelEdgeDetectionUniform;
 
 fragment half4 sobelEdgeDetectionFragment(NearbyTexelVertexIO fragmentInput [[stage_in]],
                              texture2d<half> inputTexture [[texture(0)]],

@@ -31,3 +31,4 @@
 #import "Operations/PolkaDot.h"
 #import "Operations/HalfTone.h"
 #import "Operations/Crosshatch.h"
+#import "Operations/SobelEdgeDetection.h"
