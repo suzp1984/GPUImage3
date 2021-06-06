@@ -28,3 +28,4 @@
 #import "Operations/LuminanceThreshold.h"
 #import "Operations/Pixellate.h"
 #import "Operations/PolarPixellate.h"
+#import "Operations/PolkaDot.h"

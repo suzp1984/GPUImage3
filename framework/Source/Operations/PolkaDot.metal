@@ -1,13 +1,8 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
 #include "BlendShaderTypes.h"
+#include "PolkaDot.h"
 using namespace metal;
-
-typedef struct {
-    float dotScaling;
-    float fractionalWidthOfPixel;
-    float aspectRatio;
-} PolkaDotUniform;
 
 fragment half4 polkaDotFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                                 texture2d<half> inputTexture [[texture(0)]],
