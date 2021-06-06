@@ -33,3 +33,4 @@
 #import "Operations/Crosshatch.h"
 #import "Operations/SobelEdgeDetection.h"
 #import "Operations/PrewittEdgeDetection.h"
+#import "Operations/ThresholdSobelEdgeDetection.h"

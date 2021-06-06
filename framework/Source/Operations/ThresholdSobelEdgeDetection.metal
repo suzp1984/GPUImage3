@@ -1,11 +1,7 @@
 #include <metal_stdlib>
 #include "TexelSamplingTypes.h"
+#include "ThresholdSobelEdgeDetection.h"
 using namespace metal;
-
-typedef struct {
-    float edgeStrength;
-    float threshold;
-} ThresholdSobelEdgeUniform;
 
 fragment half4 thresholdSobelEdgeDetectionFragment(NearbyTexelVertexIO fragmentInput [[stage_in]],
                              texture2d<half> inputTexture [[texture(0)]],

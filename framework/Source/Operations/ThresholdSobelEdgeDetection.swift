@@ -1,11 +1,16 @@
-public class ThresholdSobelEdgeDetection: TextureSamplingOperation {
-    public var edgeStrength:Float = 1.0 { didSet { uniformSettings["edgeStrength"] = edgeStrength } }
-    public var threshold:Float = 0.25 { didSet { uniformSettings["threshold"] = threshold } }
+public class ThresholdSobelEdgeDetection: CustomeTextureSamplingOperation {
+    public var uniform: ThresholdSobelEdgeUniform!
     
     public init() {
         super.init(fragmentFunctionName:"thresholdSobelEdgeDetectionFragment", numberOfInputs:1)
         
-        ({edgeStrength = 1.0})()
-        ({threshold = 0.25})()
+        uniform = ThresholdSobelEdgeUniform(edgeStrength: 1.0, threshold: 0.25)
+        uniformHandler = processUniforms(handler:)
+    }
+    
+    func processUniforms(handler: (UnsafeRawPointer, Int) -> Void) -> Void {
+        withUnsafePointer(to: uniform) {
+            handler($0, MemoryLayout<ThresholdSobelEdgeUniform>.stride)
+        }
     }
 }

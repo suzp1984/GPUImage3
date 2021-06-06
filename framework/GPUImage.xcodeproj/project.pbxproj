@@ -21,6 +21,8 @@
 		376A597C266CF361002C0D19 /* SobelEdgeDetection.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A597A266CF361002C0D19 /* SobelEdgeDetection.h */; };
 		376A597E266D00FC002C0D19 /* PrewittEdgeDetection.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A597D266D00FC002C0D19 /* PrewittEdgeDetection.h */; };
 		376A597F266D00FC002C0D19 /* PrewittEdgeDetection.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A597D266D00FC002C0D19 /* PrewittEdgeDetection.h */; };
+		376A5981266D064A002C0D19 /* ThresholdSobelEdgeDetection.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A5980266D064A002C0D19 /* ThresholdSobelEdgeDetection.h */; };
+		376A5982266D064A002C0D19 /* ThresholdSobelEdgeDetection.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A5980266D064A002C0D19 /* ThresholdSobelEdgeDetection.h */; };
 		37C36ABB2623E45D008586E7 /* SaturationAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36ABA2623E45D008586E7 /* SaturationAdjustment.h */; };
 		37C36ABC2623E45D008586E7 /* SaturationAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36ABA2623E45D008586E7 /* SaturationAdjustment.h */; };
 		37C36AC22623E548008586E7 /* GPUImage_bridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AC12623E548008586E7 /* GPUImage_bridge.h */; };
@@ -479,6 +481,7 @@
 		376A5977266CE76B002C0D19 /* Crosshatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Crosshatch.h; path = Source/Operations/Crosshatch.h; sourceTree = "<group>"; };
 		376A597A266CF361002C0D19 /* SobelEdgeDetection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SobelEdgeDetection.h; path = Source/Operations/SobelEdgeDetection.h; sourceTree = "<group>"; };
 		376A597D266D00FC002C0D19 /* PrewittEdgeDetection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrewittEdgeDetection.h; path = Source/Operations/PrewittEdgeDetection.h; sourceTree = "<group>"; };
+		376A5980266D064A002C0D19 /* ThresholdSobelEdgeDetection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ThresholdSobelEdgeDetection.h; path = Source/Operations/ThresholdSobelEdgeDetection.h; sourceTree = "<group>"; };
 		37C36ABA2623E45D008586E7 /* SaturationAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SaturationAdjustment.h; path = Source/Operations/SaturationAdjustment.h; sourceTree = "<group>"; };
 		37C36AC12623E548008586E7 /* GPUImage_bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImage_bridge.h; path = Source/GPUImage_bridge.h; sourceTree = "<group>"; };
 		37C36ACC26241B68008586E7 /* ContrastAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ContrastAdjustment.h; path = Source/Operations/ContrastAdjustment.h; sourceTree = "<group>"; };
@@ -897,6 +900,7 @@
 				795ECAA421ED2549000EF927 /* ThresholdSobelEdgeDetection.metal */,
 				376A597A266CF361002C0D19 /* SobelEdgeDetection.h */,
 				376A597D266D00FC002C0D19 /* PrewittEdgeDetection.h */,
+				376A5980266D064A002C0D19 /* ThresholdSobelEdgeDetection.h */,
 			);
 			name = "Image processing";
 			sourceTree = "<group>";
@@ -1056,6 +1060,7 @@
 				37C36C9626287A7B008586E7 /* HighlightsAndShadows.h in Headers */,
 				376A596C266CB703002C0D19 /* Pixellate.h in Headers */,
 				37C36B0A2624486C008586E7 /* Sharpen.h in Headers */,
+				376A5981266D064A002C0D19 /* ThresholdSobelEdgeDetection.h in Headers */,
 				37C36C9B26287CC4008586E7 /* Haze.h in Headers */,
 				376A597E266D00FC002C0D19 /* PrewittEdgeDetection.h in Headers */,
 				376A5975266CE61E002C0D19 /* HalfTone.h in Headers */,
@@ -1094,6 +1099,7 @@
 				37C36C9726287A7B008586E7 /* HighlightsAndShadows.h in Headers */,
 				376A596D266CB703002C0D19 /* Pixellate.h in Headers */,
 				37C36B0B2624486C008586E7 /* Sharpen.h in Headers */,
+				376A5982266D064A002C0D19 /* ThresholdSobelEdgeDetection.h in Headers */,
 				37C36C9C26287CC4008586E7 /* Haze.h in Headers */,
 				376A597F266D00FC002C0D19 /* PrewittEdgeDetection.h in Headers */,
 				376A5976266CE61E002C0D19 /* HalfTone.h in Headers */,
