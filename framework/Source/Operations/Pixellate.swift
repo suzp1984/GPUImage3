@@ -1,13 +1,16 @@
-public class Pixellate: BasicOperation {
-    public var fractionalWidthOfAPixel:Float = 0.01 {
-        didSet {
-            uniformSettings["fractionalWidthOfPixel"] = max(fractionalWidthOfAPixel, 0.01)
-        }
-    }
+public class Pixellate: CustomOperation {
+    public var uniform: PixellateUniform!
     
     public init() {
         super.init(fragmentFunctionName:"pixellateFragment", numberOfInputs:1)
         
-        ({fractionalWidthOfAPixel = 0.01})()
+        uniform = PixellateUniform(fractionalWidthOfPixel: 0.01, aspectRatio: 1.0)
+        uniformHandler = processUniforms(handler:)
+    }
+
+    func processUniforms(handler: (UnsafeRawPointer, Int) -> Void) -> Void {
+        withUnsafePointer(to: uniform) {
+            handler($0, MemoryLayout<PixellateUniform>.stride)
+        }
     }
 }

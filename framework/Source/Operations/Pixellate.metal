@@ -1,12 +1,9 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
 #include "BlendShaderTypes.h"
-using namespace metal;
+#include "Pixellate.h"
 
-typedef struct {
-    float fractionalWidthOfPixel;
-    float aspectRatio;
-} PixellateUniform;
+using namespace metal;
 
 fragment half4 pixellateFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                                 texture2d<half> inputTexture [[texture(0)]],

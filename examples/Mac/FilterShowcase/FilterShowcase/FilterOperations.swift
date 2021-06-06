@@ -382,9 +382,9 @@ let filterOperations: Array<FilterOperationInterface> = [
         filter:{Pixellate()},
         listName:"Pixellate",
         titleName:"Pixellate",
-        sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:0.3, initialValue:0.05),
+        sliderConfiguration:.enabled(minimumValue:0.01, maximumValue:0.3, initialValue:0.05),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.fractionalWidthOfAPixel = sliderValue
+            filter.uniform.fractionalWidthOfPixel = sliderValue
         },
         filterOperationType:.singleInput
     ),
