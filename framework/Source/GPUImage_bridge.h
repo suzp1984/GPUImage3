@@ -27,3 +27,4 @@
 #import "Operations/HighlightAndShadowTint.h"
 #import "Operations/LuminanceThreshold.h"
 #import "Operations/Pixellate.h"
+#import "Operations/PolarPixellate.h"

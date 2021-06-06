@@ -1,14 +1,9 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
 #include "BlendShaderTypes.h"
+#include "PolarPixellate.h"
 
 using namespace metal;
-
-typedef struct {
-    float2 pixelSize;
-    float2 center;
-} PolarPixellateUniform;
-
 
 fragment half4 polarPixellateFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                              texture2d<half> inputTexture [[texture(0)]],

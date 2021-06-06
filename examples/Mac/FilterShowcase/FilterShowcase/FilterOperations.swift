@@ -394,7 +394,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Polar Pixellate",
         sliderConfiguration:.enabled(minimumValue:-0.1, maximumValue:0.1, initialValue:0.05),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.pixelSize = Size(width:sliderValue, height:sliderValue)
+            filter.uniform.pixelSize = vector_float2(sliderValue, sliderValue)
         },
         filterOperationType:.singleInput
     ),
