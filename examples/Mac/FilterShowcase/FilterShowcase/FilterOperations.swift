@@ -433,9 +433,9 @@ let filterOperations: Array<FilterOperationInterface> = [
         filter:{Halftone()},
         listName:"Halftone",
         titleName:"Halftone",
-        sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:0.05, initialValue:0.01),
+        sliderConfiguration:.enabled(minimumValue:0.01, maximumValue:0.05, initialValue:0.01),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.fractionalWidthOfAPixel = sliderValue
+            filter.uniform.fractionalWidthOfPixel = sliderValue
         },
         filterOperationType:.singleInput
     ),

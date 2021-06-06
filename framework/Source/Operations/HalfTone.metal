@@ -1,12 +1,8 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
 #include "BlendShaderTypes.h"
+#include "HalfTone.h"
 using namespace metal;
-
-typedef struct {
-    float fractionalWidthOfPixel;
-    float aspectRatio;
-} HalfToneUniform;
 
 fragment half4 halftoneFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                                  texture2d<half> inputTexture [[texture(0)]],

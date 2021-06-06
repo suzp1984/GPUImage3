@@ -13,6 +13,8 @@
 		376A5970266CE098002C0D19 /* PolarPixellate.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A596E266CE098002C0D19 /* PolarPixellate.h */; };
 		376A5972266CE32D002C0D19 /* PolkaDot.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A5971266CE32D002C0D19 /* PolkaDot.h */; };
 		376A5973266CE32D002C0D19 /* PolkaDot.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A5971266CE32D002C0D19 /* PolkaDot.h */; };
+		376A5975266CE61E002C0D19 /* HalfTone.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A5974266CE61E002C0D19 /* HalfTone.h */; };
+		376A5976266CE61E002C0D19 /* HalfTone.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A5974266CE61E002C0D19 /* HalfTone.h */; };
 		37C36ABB2623E45D008586E7 /* SaturationAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36ABA2623E45D008586E7 /* SaturationAdjustment.h */; };
 		37C36ABC2623E45D008586E7 /* SaturationAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36ABA2623E45D008586E7 /* SaturationAdjustment.h */; };
 		37C36AC22623E548008586E7 /* GPUImage_bridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AC12623E548008586E7 /* GPUImage_bridge.h */; };
@@ -467,6 +469,7 @@
 		376A596B266CB703002C0D19 /* Pixellate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Pixellate.h; path = Source/Operations/Pixellate.h; sourceTree = "<group>"; };
 		376A596E266CE098002C0D19 /* PolarPixellate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PolarPixellate.h; path = Source/Operations/PolarPixellate.h; sourceTree = "<group>"; };
 		376A5971266CE32D002C0D19 /* PolkaDot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PolkaDot.h; path = Source/Operations/PolkaDot.h; sourceTree = "<group>"; };
+		376A5974266CE61E002C0D19 /* HalfTone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HalfTone.h; path = Source/Operations/HalfTone.h; sourceTree = "<group>"; };
 		37C36ABA2623E45D008586E7 /* SaturationAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SaturationAdjustment.h; path = Source/Operations/SaturationAdjustment.h; sourceTree = "<group>"; };
 		37C36AC12623E548008586E7 /* GPUImage_bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImage_bridge.h; path = Source/GPUImage_bridge.h; sourceTree = "<group>"; };
 		37C36ACC26241B68008586E7 /* ContrastAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ContrastAdjustment.h; path = Source/Operations/ContrastAdjustment.h; sourceTree = "<group>"; };
@@ -774,6 +777,7 @@
 				376A596B266CB703002C0D19 /* Pixellate.h */,
 				376A596E266CE098002C0D19 /* PolarPixellate.h */,
 				376A5971266CE32D002C0D19 /* PolkaDot.h */,
+				376A5974266CE61E002C0D19 /* HalfTone.h */,
 			);
 			name = Effects;
 			sourceTree = "<group>";
@@ -1040,6 +1044,7 @@
 				376A596C266CB703002C0D19 /* Pixellate.h in Headers */,
 				37C36B0A2624486C008586E7 /* Sharpen.h in Headers */,
 				37C36C9B26287CC4008586E7 /* Haze.h in Headers */,
+				376A5975266CE61E002C0D19 /* HalfTone.h in Headers */,
 				37C36AD9262423AB008586E7 /* LevelsAdjustment.h in Headers */,
 				37C36CB52629199D008586E7 /* Vibrance.h in Headers */,
 				37C36AE826242DA8008586E7 /* HueAdjustment.h in Headers */,
@@ -1074,6 +1079,7 @@
 				376A596D266CB703002C0D19 /* Pixellate.h in Headers */,
 				37C36B0B2624486C008586E7 /* Sharpen.h in Headers */,
 				37C36C9C26287CC4008586E7 /* Haze.h in Headers */,
+				376A5976266CE61E002C0D19 /* HalfTone.h in Headers */,
 				37C36ADA262423AB008586E7 /* LevelsAdjustment.h in Headers */,
 				37C36CB62629199D008586E7 /* Vibrance.h in Headers */,
 				37C36AE926242DA8008586E7 /* HueAdjustment.h in Headers */,
