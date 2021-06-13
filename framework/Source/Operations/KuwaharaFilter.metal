@@ -7,11 +7,8 @@
 
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
+#include "KuwaharaFilter.h"
 using namespace metal;
-
-typedef struct {
-    float radius;
-} KuwaharaUniform;
 
 constant float2 src_size = float2(1.0 / 768.0, 1.0 / 1024.0);
 

@@ -740,16 +740,16 @@ let filterOperations: Array<FilterOperationInterface> = [
             return blendFilter
         })
     ),
-//    FilterOperation(
-//        filter:{KuwaharaFilter()},
-//        listName:"Kuwahara",
-//        titleName:"Kuwahara",
-//        sliderConfiguration:.enabled(minimumValue:3.0, maximumValue:9.0, initialValue:3.0),
-//        sliderUpdateCallback: {(filter, sliderValue) in
-//            filter.radius = Int(round(sliderValue))
-//        },
-//        filterOperationType:.singleInput
-//    ),
+    FilterOperation(
+        filter:{KuwaharaFilter()},
+        listName:"Kuwahara",
+        titleName:"Kuwahara",
+        sliderConfiguration:.enabled(minimumValue:3.0, maximumValue:9.0, initialValue:3.0),
+        sliderUpdateCallback: {(filter, sliderValue) in
+            filter.uniform.radius = round(sliderValue)
+        },
+        filterOperationType:.singleInput
+    ),
     FilterOperation(
         filter:{KuwaharaRadius3Filter()},
         listName:"Kuwahara (radius 3)",

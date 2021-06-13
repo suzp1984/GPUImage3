@@ -31,6 +31,8 @@
 		376A598B2675DDEB002C0D19 /* ToonFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A59892675DDEB002C0D19 /* ToonFilter.h */; };
 		376A598D2675EACD002C0D19 /* ChromaKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A598C2675EACD002C0D19 /* ChromaKey.h */; };
 		376A598E2675EACD002C0D19 /* ChromaKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A598C2675EACD002C0D19 /* ChromaKey.h */; };
+		376A59902675F311002C0D19 /* KuwaharaFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A598F2675F311002C0D19 /* KuwaharaFilter.h */; };
+		376A59912675F311002C0D19 /* KuwaharaFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A598F2675F311002C0D19 /* KuwaharaFilter.h */; };
 		37C36ABB2623E45D008586E7 /* SaturationAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36ABA2623E45D008586E7 /* SaturationAdjustment.h */; };
 		37C36ABC2623E45D008586E7 /* SaturationAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36ABA2623E45D008586E7 /* SaturationAdjustment.h */; };
 		37C36AC22623E548008586E7 /* GPUImage_bridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AC12623E548008586E7 /* GPUImage_bridge.h */; };
@@ -494,6 +496,7 @@
 		376A59862675DB29002C0D19 /* ThresholdSketch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ThresholdSketch.h; path = Source/Operations/ThresholdSketch.h; sourceTree = "<group>"; };
 		376A59892675DDEB002C0D19 /* ToonFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ToonFilter.h; path = Source/Operations/ToonFilter.h; sourceTree = "<group>"; };
 		376A598C2675EACD002C0D19 /* ChromaKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ChromaKey.h; path = Source/Operations/ChromaKey.h; sourceTree = "<group>"; };
+		376A598F2675F311002C0D19 /* KuwaharaFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KuwaharaFilter.h; path = Source/Operations/KuwaharaFilter.h; sourceTree = "<group>"; };
 		37C36ABA2623E45D008586E7 /* SaturationAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SaturationAdjustment.h; path = Source/Operations/SaturationAdjustment.h; sourceTree = "<group>"; };
 		37C36AC12623E548008586E7 /* GPUImage_bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImage_bridge.h; path = Source/GPUImage_bridge.h; sourceTree = "<group>"; };
 		37C36ACC26241B68008586E7 /* ContrastAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ContrastAdjustment.h; path = Source/Operations/ContrastAdjustment.h; sourceTree = "<group>"; };
@@ -806,6 +809,7 @@
 				376A59832675D8D5002C0D19 /* Sketch.h */,
 				376A59862675DB29002C0D19 /* ThresholdSketch.h */,
 				376A59892675DDEB002C0D19 /* ToonFilter.h */,
+				376A598F2675F311002C0D19 /* KuwaharaFilter.h */,
 			);
 			name = Effects;
 			sourceTree = "<group>";
@@ -1071,6 +1075,7 @@
 				376A59872675DB29002C0D19 /* ThresholdSketch.h in Headers */,
 				37C36AD426242271008586E7 /* BrightnessAdjustment.h in Headers */,
 				376A5978266CE76B002C0D19 /* Crosshatch.h in Headers */,
+				376A59902675F311002C0D19 /* KuwaharaFilter.h in Headers */,
 				37C36CBA26291EEF008586E7 /* HighlightAndShadowTint.h in Headers */,
 				37C36ABB2623E45D008586E7 /* SaturationAdjustment.h in Headers */,
 				37C36CBF262922B0008586E7 /* LuminanceThreshold.h in Headers */,
@@ -1114,6 +1119,7 @@
 				376A59882675DB29002C0D19 /* ThresholdSketch.h in Headers */,
 				37C36AD526242271008586E7 /* BrightnessAdjustment.h in Headers */,
 				376A5979266CE76B002C0D19 /* Crosshatch.h in Headers */,
+				376A59912675F311002C0D19 /* KuwaharaFilter.h in Headers */,
 				37C36CBB26291EEF008586E7 /* HighlightAndShadowTint.h in Headers */,
 				37C36ABC2623E45D008586E7 /* SaturationAdjustment.h in Headers */,
 				37C36CC0262922B0008586E7 /* LuminanceThreshold.h in Headers */,
