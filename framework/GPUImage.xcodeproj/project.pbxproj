@@ -29,6 +29,8 @@
 		376A59882675DB29002C0D19 /* ThresholdSketch.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A59862675DB29002C0D19 /* ThresholdSketch.h */; };
 		376A598A2675DDEB002C0D19 /* ToonFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A59892675DDEB002C0D19 /* ToonFilter.h */; };
 		376A598B2675DDEB002C0D19 /* ToonFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A59892675DDEB002C0D19 /* ToonFilter.h */; };
+		376A598D2675EACD002C0D19 /* ChromaKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A598C2675EACD002C0D19 /* ChromaKey.h */; };
+		376A598E2675EACD002C0D19 /* ChromaKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A598C2675EACD002C0D19 /* ChromaKey.h */; };
 		37C36ABB2623E45D008586E7 /* SaturationAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36ABA2623E45D008586E7 /* SaturationAdjustment.h */; };
 		37C36ABC2623E45D008586E7 /* SaturationAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36ABA2623E45D008586E7 /* SaturationAdjustment.h */; };
 		37C36AC22623E548008586E7 /* GPUImage_bridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AC12623E548008586E7 /* GPUImage_bridge.h */; };
@@ -491,6 +493,7 @@
 		376A59832675D8D5002C0D19 /* Sketch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sketch.h; path = Source/Operations/Sketch.h; sourceTree = "<group>"; };
 		376A59862675DB29002C0D19 /* ThresholdSketch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ThresholdSketch.h; path = Source/Operations/ThresholdSketch.h; sourceTree = "<group>"; };
 		376A59892675DDEB002C0D19 /* ToonFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ToonFilter.h; path = Source/Operations/ToonFilter.h; sourceTree = "<group>"; };
+		376A598C2675EACD002C0D19 /* ChromaKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ChromaKey.h; path = Source/Operations/ChromaKey.h; sourceTree = "<group>"; };
 		37C36ABA2623E45D008586E7 /* SaturationAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SaturationAdjustment.h; path = Source/Operations/SaturationAdjustment.h; sourceTree = "<group>"; };
 		37C36AC12623E548008586E7 /* GPUImage_bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImage_bridge.h; path = Source/GPUImage_bridge.h; sourceTree = "<group>"; };
 		37C36ACC26241B68008586E7 /* ContrastAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ContrastAdjustment.h; path = Source/Operations/ContrastAdjustment.h; sourceTree = "<group>"; };
@@ -913,6 +916,7 @@
 				376A597A266CF361002C0D19 /* SobelEdgeDetection.h */,
 				376A597D266D00FC002C0D19 /* PrewittEdgeDetection.h */,
 				376A5980266D064A002C0D19 /* ThresholdSobelEdgeDetection.h */,
+				376A598C2675EACD002C0D19 /* ChromaKey.h */,
 			);
 			name = "Image processing";
 			sourceTree = "<group>";
@@ -1079,6 +1083,7 @@
 				376A59842675D8D5002C0D19 /* Sketch.h in Headers */,
 				376A597E266D00FC002C0D19 /* PrewittEdgeDetection.h in Headers */,
 				376A5975266CE61E002C0D19 /* HalfTone.h in Headers */,
+				376A598D2675EACD002C0D19 /* ChromaKey.h in Headers */,
 				37C36AD9262423AB008586E7 /* LevelsAdjustment.h in Headers */,
 				37C36CB52629199D008586E7 /* Vibrance.h in Headers */,
 				37C36AE826242DA8008586E7 /* HueAdjustment.h in Headers */,
@@ -1121,6 +1126,7 @@
 				376A59852675D8D5002C0D19 /* Sketch.h in Headers */,
 				376A597F266D00FC002C0D19 /* PrewittEdgeDetection.h in Headers */,
 				376A5976266CE61E002C0D19 /* HalfTone.h in Headers */,
+				376A598E2675EACD002C0D19 /* ChromaKey.h in Headers */,
 				37C36ADA262423AB008586E7 /* LevelsAdjustment.h in Headers */,
 				37C36CB62629199D008586E7 /* Vibrance.h in Headers */,
 				37C36AE926242DA8008586E7 /* HueAdjustment.h in Headers */,

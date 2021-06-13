@@ -1,13 +1,18 @@
-public class ChromaKeying: BasicOperation {
-    public var thresholdSensitivity:Float = 0.4 { didSet { uniformSettings["thresholdSensitivity"] = thresholdSensitivity } }
-    public var smoothing:Float = 0.1 { didSet { uniformSettings["smoothing"] = smoothing } }
-    public var colorToReplace:Color = Color.green { didSet { uniformSettings["colorToReplace"] = colorToReplace } }
+public class ChromaKeying: CustomOperation {
+    public var uniform: ChromaKeyUniform!
     
     public init() {
         super.init(fragmentFunctionName:"ChromaKeyFragment", numberOfInputs:1)
         
-        ({thresholdSensitivity = 0.4})()
-        ({smoothing = 0.1})()
-        ({colorToReplace = Color.green})()
+        uniform = ChromaKeyUniform(thresholdSensitivity: 0.4,
+                                   smoothing: 0.1,
+                                   colorToReplace: vector_float4(0.0, 1.0, 0.0, 1.0))
+        uniformHandler = processUniforms(handler:)
+    }
+    
+    func processUniforms(handler: (UnsafeRawPointer, Int) -> Void) -> Void {
+        withUnsafePointer(to: uniform) {
+            handler($0, MemoryLayout<ChromaKeyUniform>.stride)
+        }
     }
 }

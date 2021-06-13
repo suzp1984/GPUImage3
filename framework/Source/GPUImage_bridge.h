@@ -37,3 +37,4 @@
 #import "Operations/Sketch.h"
 #import "Operations/ThresholdSketch.h"
 #import "Operations/ToonFilter.h"
+#import "Operations/ChromaKey.h"

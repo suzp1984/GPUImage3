@@ -724,7 +724,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Chroma Key",
         sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:1.00, initialValue:0.40),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.thresholdSensitivity = sliderValue
+            filter.uniform.thresholdSensitivity = sliderValue
         },
         filterOperationType:.custom(filterSetupFunction:{(camera, filter, outputView) in
             let castFilter = filter as! ChromaKeying

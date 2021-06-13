@@ -1,13 +1,7 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
+#include "ChromaKey.h"
 using namespace metal;
-
-typedef struct
-{
-    float thresholdSensitivity;
-    float smoothing;
-    float4 colorToReplace;
-} ChromaKeyUniform;
 
 fragment half4 ChromaKeyFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                                   texture2d<half> inputTexture [[texture(0)]],
