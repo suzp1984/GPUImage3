@@ -1,6 +1,6 @@
 import MetalPerformanceShaders
 
-public class GaussianBlur: BasicOperation {
+public class GaussianBlur: CustomOperation {
     public var blurRadiusInPixels:Float = 2.0 {
         didSet
         {
