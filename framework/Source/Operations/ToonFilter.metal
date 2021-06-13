@@ -1,12 +1,7 @@
 #include <metal_stdlib>
 #include "TexelSamplingTypes.h"
+#include "ToonFilter.h"
 using namespace metal;
-
-typedef struct
-{
-    float threshold;
-    float quantizationLevels;
-} ToonUniform;
 
 fragment half4 toonFragment(NearbyTexelVertexIO fragmentInput [[stage_in]],
                                      texture2d<half> inputTexture [[texture(0)]],

@@ -36,3 +36,4 @@
 #import "Operations/ThresholdSobelEdgeDetection.h"
 #import "Operations/Sketch.h"
 #import "Operations/ThresholdSketch.h"
+#import "Operations/ToonFilter.h"
