@@ -1,11 +1,7 @@
 #include <metal_stdlib>
 #include "TexelSamplingTypes.h"
+#include "ThresholdSketch.h"
 using namespace metal;
-
-typedef struct {
-    float edgeStrength;
-    float threshold;
-} ThresholdSketchUniform;
 
 fragment half4 thresholdSketchFragment(NearbyTexelVertexIO fragmentInput [[stage_in]],
                              texture2d<half> inputTexture [[texture(0)]],

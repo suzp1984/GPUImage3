@@ -629,7 +629,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Threshold Sketch",
         sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:1.0, initialValue:0.25),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.threshold = sliderValue
+            filter.uniform.threshold = sliderValue
         },
         filterOperationType:.singleInput
     ),

@@ -10,7 +10,7 @@ public class SketchFilter: CustomeTextureSamplingOperation {
     
     func processUniforms(handler: (UnsafeRawPointer, Int) -> Void) -> Void {
         withUnsafePointer(to: uniform) {
-            handler($0, MemoryLayout<PolkaDotUniform>.stride)
+            handler($0, MemoryLayout<SketchUniform>.stride)
         }
     }
 }
