@@ -1,17 +1,20 @@
-public class Vignette: BasicOperation {
-    public var center:Position = Position.center { didSet { uniformSettings["vignetteCenter"] = center } }
-    public var color:Color = Color.black { didSet { uniformSettings["vignetteColor"] = color } }
-    public var start:Float = 0.3 { didSet { uniformSettings["vignetteStart"] = start } }
-    public var end:Float = 0.75 { didSet { uniformSettings["vignetteEnd"] = end } }
+public class Vignette: CustomOperation {
+    public var uniform: VignetteUniform!
     
     public init() {
         super.init(fragmentFunctionName:"vignetteFragment", numberOfInputs:1)
         
-        ({center = Position.center})()
-        ({color = Color.black})()
-        ({start = 0.3})()
-        ({end = 0.75})()
+        uniform = VignetteUniform(vignetteCenter: vector_float2(0.5, 0.5),
+                                  vignetteColor: vector_float3(0.0, 0.0, 0.0),
+                                  vignetteStart: 0.3,
+                                  vignetteEnd: 0.75)
         
-        uniformSettings.setUniformStride(byCountOfFloats: 12)
+        uniformHandler = processUniforms(handler:)
+    }
+    
+    func processUniforms(handler: (UnsafeRawPointer, Int) -> Void) -> Void {
+        withUnsafePointer(to: uniform) {
+            handler($0, MemoryLayout<VignetteUniform>.stride)
+        }
     }
 }

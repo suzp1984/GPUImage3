@@ -764,7 +764,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Vignette",
         sliderConfiguration:.enabled(minimumValue:0.5, maximumValue:0.9, initialValue:0.75),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.end = sliderValue
+            filter.uniform.vignetteEnd = sliderValue
         },
         filterOperationType:.singleInput
     ),

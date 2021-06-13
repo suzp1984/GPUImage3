@@ -1,13 +1,7 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
+#include "Vignette.h"
 using namespace metal;
-
-typedef struct {
-    float2 vignetteCenter;
-    float3 vignetteColor;
-    float vignetteStart;
-    float vignetteEnd;
-} VignetteUniform;
 
 fragment half4 vignetteFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                                        texture2d<half> inputTexture [[texture(0)]],

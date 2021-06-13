@@ -39,3 +39,4 @@
 #import "Operations/ToonFilter.h"
 #import "Operations/ChromaKey.h"
 #import "Operations/KuwaharaFilter.h"
+#import "Operations/Vignette.h"
