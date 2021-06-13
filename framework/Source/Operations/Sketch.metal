@@ -1,10 +1,7 @@
 #include <metal_stdlib>
 #include "TexelSamplingTypes.h"
+#include "Sketch.h"
 using namespace metal;
-
-typedef struct {
-    float edgeStrength;
-} SketchUniform;
 
 fragment half4 sketchFragment(NearbyTexelVertexIO fragmentInput [[stage_in]],
                              texture2d<half> inputTexture [[texture(0)]],

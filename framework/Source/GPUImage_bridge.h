@@ -34,3 +34,4 @@
 #import "Operations/SobelEdgeDetection.h"
 #import "Operations/PrewittEdgeDetection.h"
 #import "Operations/ThresholdSobelEdgeDetection.h"
+#import "Operations/Sketch.h"

@@ -23,6 +23,8 @@
 		376A597F266D00FC002C0D19 /* PrewittEdgeDetection.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A597D266D00FC002C0D19 /* PrewittEdgeDetection.h */; };
 		376A5981266D064A002C0D19 /* ThresholdSobelEdgeDetection.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A5980266D064A002C0D19 /* ThresholdSobelEdgeDetection.h */; };
 		376A5982266D064A002C0D19 /* ThresholdSobelEdgeDetection.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A5980266D064A002C0D19 /* ThresholdSobelEdgeDetection.h */; };
+		376A59842675D8D5002C0D19 /* Sketch.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A59832675D8D5002C0D19 /* Sketch.h */; };
+		376A59852675D8D5002C0D19 /* Sketch.h in Headers */ = {isa = PBXBuildFile; fileRef = 376A59832675D8D5002C0D19 /* Sketch.h */; };
 		37C36ABB2623E45D008586E7 /* SaturationAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36ABA2623E45D008586E7 /* SaturationAdjustment.h */; };
 		37C36ABC2623E45D008586E7 /* SaturationAdjustment.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36ABA2623E45D008586E7 /* SaturationAdjustment.h */; };
 		37C36AC22623E548008586E7 /* GPUImage_bridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C36AC12623E548008586E7 /* GPUImage_bridge.h */; };
@@ -482,6 +484,7 @@
 		376A597A266CF361002C0D19 /* SobelEdgeDetection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SobelEdgeDetection.h; path = Source/Operations/SobelEdgeDetection.h; sourceTree = "<group>"; };
 		376A597D266D00FC002C0D19 /* PrewittEdgeDetection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrewittEdgeDetection.h; path = Source/Operations/PrewittEdgeDetection.h; sourceTree = "<group>"; };
 		376A5980266D064A002C0D19 /* ThresholdSobelEdgeDetection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ThresholdSobelEdgeDetection.h; path = Source/Operations/ThresholdSobelEdgeDetection.h; sourceTree = "<group>"; };
+		376A59832675D8D5002C0D19 /* Sketch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sketch.h; path = Source/Operations/Sketch.h; sourceTree = "<group>"; };
 		37C36ABA2623E45D008586E7 /* SaturationAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SaturationAdjustment.h; path = Source/Operations/SaturationAdjustment.h; sourceTree = "<group>"; };
 		37C36AC12623E548008586E7 /* GPUImage_bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImage_bridge.h; path = Source/GPUImage_bridge.h; sourceTree = "<group>"; };
 		37C36ACC26241B68008586E7 /* ContrastAdjustment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ContrastAdjustment.h; path = Source/Operations/ContrastAdjustment.h; sourceTree = "<group>"; };
@@ -791,6 +794,7 @@
 				376A5971266CE32D002C0D19 /* PolkaDot.h */,
 				376A5974266CE61E002C0D19 /* HalfTone.h */,
 				376A5977266CE76B002C0D19 /* Crosshatch.h */,
+				376A59832675D8D5002C0D19 /* Sketch.h */,
 			);
 			name = Effects;
 			sourceTree = "<group>";
@@ -1062,6 +1066,7 @@
 				37C36B0A2624486C008586E7 /* Sharpen.h in Headers */,
 				376A5981266D064A002C0D19 /* ThresholdSobelEdgeDetection.h in Headers */,
 				37C36C9B26287CC4008586E7 /* Haze.h in Headers */,
+				376A59842675D8D5002C0D19 /* Sketch.h in Headers */,
 				376A597E266D00FC002C0D19 /* PrewittEdgeDetection.h in Headers */,
 				376A5975266CE61E002C0D19 /* HalfTone.h in Headers */,
 				37C36AD9262423AB008586E7 /* LevelsAdjustment.h in Headers */,
@@ -1101,6 +1106,7 @@
 				37C36B0B2624486C008586E7 /* Sharpen.h in Headers */,
 				376A5982266D064A002C0D19 /* ThresholdSobelEdgeDetection.h in Headers */,
 				37C36C9C26287CC4008586E7 /* Haze.h in Headers */,
+				376A59852675D8D5002C0D19 /* Sketch.h in Headers */,
 				376A597F266D00FC002C0D19 /* PrewittEdgeDetection.h in Headers */,
 				376A5976266CE61E002C0D19 /* HalfTone.h in Headers */,
 				37C36ADA262423AB008586E7 /* LevelsAdjustment.h in Headers */,
