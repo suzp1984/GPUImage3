@@ -822,7 +822,7 @@ let filterOperations: Array<FilterOperationInterface> = [
         titleName:"Zoom Blur",
         sliderConfiguration:.enabled(minimumValue:0.0, maximumValue:2.5, initialValue:1.0),
         sliderUpdateCallback: {(filter, sliderValue) in
-            filter.blurSize = sliderValue
+            filter.uniform.size = sliderValue
         },
         filterOperationType:.singleInput
     ),

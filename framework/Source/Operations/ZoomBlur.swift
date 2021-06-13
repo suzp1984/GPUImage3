@@ -1,13 +1,16 @@
-public class ZoomBlur: BasicOperation {
-    public var blurSize:Float = 1.0 { didSet { uniformSettings["size"] = blurSize } }
-    public var blurCenter:Position = Position.center { didSet { uniformSettings["center"] = blurCenter } }
+public class ZoomBlur: CustomOperation {
+    public var uniform: ZoomBlurUniform!
     
     public init() {
         super.init(fragmentFunctionName:"zoomBlurFragment", numberOfInputs:1)
         
-        ({blurSize = 1.0})()
-        ({blurCenter = Position.center})()
-        
-        uniformSettings.setUniformStride(byCountOfFloats: 4)
+        uniform = ZoomBlurUniform(center: vector_float2(0.5, 0.5), size: 1.0)
+        uniformHandler = processUniforms(handler:)
+    }
+    
+    func processUniforms(handler: (UnsafeRawPointer, Int) -> Void) -> Void {
+        withUnsafePointer(to: uniform) {
+            handler($0, MemoryLayout<ZoomBlurUniform>.stride)
+        }
     }
 }

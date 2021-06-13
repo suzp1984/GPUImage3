@@ -1,12 +1,7 @@
 #include <metal_stdlib>
 #include "OperationShaderTypes.h"
+#include "ZoomBlur.h"
 using namespace metal;
-
-typedef struct {
-    float2 center;
-    float size;
-} ZoomBlurUniform;
-
 
 fragment half4 zoomBlurFragment(SingleInputVertexIO fragmentInput [[stage_in]],
                              texture2d<half> inputTexture [[texture(0)]],

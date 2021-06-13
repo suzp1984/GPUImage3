@@ -40,3 +40,4 @@
 #import "Operations/ChromaKey.h"
 #import "Operations/KuwaharaFilter.h"
 #import "Operations/Vignette.h"
+#import "Operations/ZoomBlur.h"
