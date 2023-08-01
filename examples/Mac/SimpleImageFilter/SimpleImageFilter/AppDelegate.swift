@@ -12,7 +12,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc dynamic var filterValue = 1.0 {
         didSet {
-            filter.saturation = GLfloat(filterValue)
+            filter.uniform.saturation = GLfloat(filterValue)
             image.processImage()
         }
     }

@@ -16,6 +16,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         do {
             camera = try Camera(sessionPreset:.vga640x480)
+            camera.orientation = .portrait
+            
             filter = SmoothToonFilter()
             
             camera --> filter --> renderView

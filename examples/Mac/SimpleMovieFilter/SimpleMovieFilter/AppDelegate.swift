@@ -12,7 +12,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc dynamic var filterValue = 0.05 {
         didSet {
-            filter.fractionalWidthOfAPixel = GLfloat(filterValue)
+            filter.uniform.fractionalWidthOfPixel = GLfloat(filterValue)
         }
     }
     

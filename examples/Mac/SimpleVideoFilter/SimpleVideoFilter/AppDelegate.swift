@@ -12,7 +12,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc dynamic var filterSetting:Float = 0.01 {
         didSet {
-            filter.fractionalWidthOfAPixel = filterSetting
+            filter.uniform.fractionalWidthOfPixel = filterSetting
         }
     }
     
@@ -29,6 +29,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         do {
             camera = try Camera(sessionPreset:.vga640x480)
+            camera.orientation = .portrait
+            
             filter = Pixellate()
 
             camera --> filter --> renderView
