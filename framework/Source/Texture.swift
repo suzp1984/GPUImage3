@@ -1,4 +1,5 @@
 import Foundation
+import CoreGraphics
 import Metal
 #if os(iOS)
 import UIKit
